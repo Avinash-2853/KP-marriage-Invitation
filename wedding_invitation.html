@@ -523,11 +523,11 @@
     </button>
 
     <!-- 2. Shehnai Sound Synthesizer Toggle -->
-    <button id="musicToggle" title="Traditional Shehnai Wedding Melody" class="group flex items-center gap-2.5 burgundy-gradient hover:brightness-110 text-white border border-rose-soft/40 px-4 py-2.5 rounded-full shadow-xl backdrop-blur-md transition-all duration-300 transform hover:scale-105 active:scale-95 text-xs font-medium tracking-wide cursor-pointer">
+    <button id="musicToggle" title="Royal Gujarati Wedding Music" class="group flex items-center gap-2.5 burgundy-gradient hover:brightness-110 text-white border border-rose-soft/40 px-4 py-2.5 rounded-full shadow-xl backdrop-blur-md transition-all duration-300 transform hover:scale-105 active:scale-95 text-xs font-medium tracking-wide cursor-pointer">
       <span id="musicIconWrapper" class="flex items-center justify-center">
         <i data-lucide="music" class="w-4 h-4 text-gold-light"></i>
       </span>
-      <span id="musicStatusText">Play Shehnai</span>
+      <span id="musicStatusText">Play Music</span>
     </button>
   </aside>
 
@@ -539,9 +539,9 @@
     </button>
     <div class="w-px h-4 bg-champagne"></div>
     <!-- Music Mobile -->
-    <button id="musicToggleMobile" title="Play Shehnai" class="flex items-center gap-1.5 px-3 py-1.5 burgundy-gradient text-white rounded-full text-xs font-medium shadow active:scale-95">
+    <button id="musicToggleMobile" title="Royal Gujarati Wedding Music" class="flex items-center gap-1.5 px-3 py-1.5 burgundy-gradient text-white rounded-full text-xs font-medium shadow active:scale-95">
       <span id="musicIconWrapperMobile"><i data-lucide="music" class="w-3.5 h-3.5 text-gold-light"></i></span>
-      <span id="musicStatusTextMobile">Shehnai</span>
+      <span id="musicStatusTextMobile">Music</span>
     </button>
   </div>
 
@@ -1826,129 +1826,68 @@
     }
 
     /* =====================================================================
-       5. TRADITIONAL SHEHNAI MELODY (WEB AUDIO API)
-       Pure Web Audio API implementation with zero external audio dependencies.
-       User controlled: never autoplays.
+       5. ROYAL GUJARATI WEDDING AUDIO (AUDIO ELEMENT)
+       Plays 'Royal Gujarati Wedding.mp3' seamlessly with looping and state toggle.
        ===================================================================== */
-    let audioCtx = null;
+    const weddingAudio = new Audio('Royal Gujarati Wedding.mp3');
+    weddingAudio.loop = true;
+    weddingAudio.preload = 'auto';
+
     let isPlaying = false;
-    let musicInterval = null;
 
-    // Auspicious Indian Wedding Raga Scale (Sa, Re, Ga, Ma, Pa, Dha, Ni, Sa')
-    const ragaFrequencies = [
-      261.63, // Sa (C4)
-      293.66, // Re (D4)
-      329.63, // Ga (E4)
-      349.23, // Ma (F4)
-      392.00, // Pa (G4)
-      440.00, // Dha (A4)
-      493.88, // Ni (B4)
-      523.25, // Sa' (C5)
-      587.33  // Re' (D5)
-    ];
+    const eqBars = `
+      <span class="inline-flex items-end gap-0.5 h-3.5 w-3.5 justify-center">
+        <span class="w-0.5 bg-gold-light rounded-full eq-bar-1"></span>
+        <span class="w-0.5 bg-gold-light rounded-full eq-bar-2"></span>
+        <span class="w-0.5 bg-gold-light rounded-full eq-bar-3"></span>
+      </span>
+    `;
 
-    // Melodic wedding phrase
-    const festiveMelody = [
-      0, 2, 4, 7, 6, 4, 2, 0, 4, 7, 8, 7, 4, 2, 0, 2, 4, 2, 0, 0
-    ];
-    let noteStep = 0;
-
-    function playShehnaiNote(freq, duration = 0.55) {
-      if (!audioCtx) return;
-
-      const osc = audioCtx.createOscillator();
-      const gainNode = audioCtx.createGain();
-      const filter = audioCtx.createBiquadFilter();
-
-      osc.type = 'sawtooth';
-      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(freq * 1.015, audioCtx.currentTime + 0.08);
-      osc.frequency.exponentialRampToValueAtTime(freq, audioCtx.currentTime + duration);
-
-      filter.type = 'bandpass';
-      filter.frequency.setValueAtTime(freq * 2.2, audioCtx.currentTime);
-      filter.Q.setValueAtTime(3.8, audioCtx.currentTime);
-
-      gainNode.gain.setValueAtTime(0.001, audioCtx.currentTime);
-      gainNode.gain.linearRampToValueAtTime(0.11, audioCtx.currentTime + 0.07);
-      gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
-
-      osc.connect(filter);
-      filter.connect(gainNode);
-      gainNode.connect(audioCtx.destination);
-
-      osc.start();
-      osc.stop(audioCtx.currentTime + duration);
-    }
-
-    function playIndianDrone(saFreq = 130.81) {
-      if (!audioCtx) return;
-      const droneGain = audioCtx.createGain();
-      droneGain.gain.setValueAtTime(0.018, audioCtx.currentTime);
-
-      const osc1 = audioCtx.createOscillator();
-      osc1.type = 'triangle';
-      osc1.frequency.value = saFreq;
-
-      const osc2 = audioCtx.createOscillator();
-      osc2.type = 'sine';
-      osc2.frequency.value = saFreq * 1.498;
-
-      osc1.connect(droneGain);
-      osc2.connect(droneGain);
-      droneGain.connect(audioCtx.destination);
-
-      osc1.start();
-      osc2.start();
-    }
-
-    function toggleMusic() {
+    function updateMusicUI(playing) {
       const statusText = document.getElementById('musicStatusText');
       const iconWrapper = document.getElementById('musicIconWrapper');
       const statusTextMobile = document.getElementById('musicStatusTextMobile');
       const iconWrapperMobile = document.getElementById('musicIconWrapperMobile');
 
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        playIndianDrone();
-      }
-
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-
-      const eqBars = `
-        <span class="inline-flex items-end gap-0.5 h-3.5 w-3.5 justify-center">
-          <span class="w-0.5 bg-gold-light rounded-full eq-bar-1"></span>
-          <span class="w-0.5 bg-gold-light rounded-full eq-bar-2"></span>
-          <span class="w-0.5 bg-gold-light rounded-full eq-bar-3"></span>
-        </span>
-      `;
-
-      if (!isPlaying) {
-        isPlaying = true;
-        if (statusText) statusText.innerText = 'Pause Shehnai';
+      if (playing) {
+        if (statusText) statusText.innerText = 'Pause Music';
         if (statusTextMobile) statusTextMobile.innerText = 'Pause';
         if (iconWrapper) iconWrapper.innerHTML = eqBars;
         if (iconWrapperMobile) iconWrapperMobile.innerHTML = eqBars;
-
-        musicInterval = setInterval(() => {
-          const noteIndex = festiveMelody[noteStep % festiveMelody.length];
-          const freq = ragaFrequencies[noteIndex];
-          playShehnaiNote(freq, 0.44);
-          noteStep++;
-        }, 460);
       } else {
-        isPlaying = false;
-        clearInterval(musicInterval);
-        if (statusText) statusText.innerText = 'Play Shehnai';
-        if (statusTextMobile) statusTextMobile.innerText = 'Shehnai';
+        if (statusText) statusText.innerText = 'Play Music';
+        if (statusTextMobile) statusTextMobile.innerText = 'Music';
         const musicIcon = '<i data-lucide="music" class="w-4 h-4 text-gold-light"></i>';
         if (iconWrapper) iconWrapper.innerHTML = musicIcon;
         if (iconWrapperMobile) iconWrapperMobile.innerHTML = '<i data-lucide="music" class="w-3.5 h-3.5 text-gold-light"></i>';
         lucide.createIcons();
       }
     }
+
+    function toggleMusic() {
+      if (!isPlaying) {
+        weddingAudio.play().then(() => {
+          isPlaying = true;
+          updateMusicUI(true);
+        }).catch((err) => {
+          console.warn('Audio play request blocked or failed:', err);
+        });
+      } else {
+        weddingAudio.pause();
+        isPlaying = false;
+        updateMusicUI(false);
+      }
+    }
+
+    weddingAudio.addEventListener('pause', () => {
+      isPlaying = false;
+      updateMusicUI(false);
+    });
+
+    weddingAudio.addEventListener('ended', () => {
+      isPlaying = false;
+      updateMusicUI(false);
+    });
 
     document.getElementById('musicToggle').addEventListener('click', toggleMusic);
     const musicToggleMobile = document.getElementById('musicToggleMobile');
