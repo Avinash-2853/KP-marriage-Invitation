@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Kashyap & Kajal | Royal Wedding Invitation | Prajapati Family</title>
+  <title>Kajal & Dr. Kashyap | Royal Wedding Invitation | Prajapati Family</title>
 
-  <!-- Meta tags for social sharing (WhatsApp, etc.) -->
+  <!-- Meta tags for social sharing (WhatsApp, Instagram, Facebook) -->
   <meta name="description"
-    content="Wedding celebration invitation of Dr. Kashyap & Kajal - Prajapati Family. Sunday, 29th November 2026.">
-  <meta property="og:title" content="Dr. Kashyap & Kajal | Royal Wedding Invitation">
+    content="Wedding celebration invitation of Chi. Kajal & Chi. Dr. Kashyap - Prajapati Family (Viramgam). Sunday, 29th November 2026 at Shree Siddhnath Mahadev Mandir.">
+  <meta property="og:title" content="Kajal & Dr. Kashyap | Royal Wedding Invitation">
   <meta property="og:description"
-    content="Prajapati Family cordially invites you to the wedding celebration on 29 November 2026.">
+    content="The Prajapati Family cordially invites you to the auspicious wedding celebration of Kajal & Dr. Kashyap on 29 November 2026.">
   <meta property="og:type" content="website">
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -29,45 +29,58 @@
           },
           colors: {
             ivory: {
-              DEFAULT: '#FAF6F0',
-              cream: '#FAF6F0',
-              light: '#FCF9F5',
-              dark: '#F3ECE3'
+              DEFAULT: '#FAF7F2',
+              cream: '#FAF7F2',
+              light: '#FFFDF9',
+              dark: '#F1EAE0'
             },
-            warmWhite: '#FFFCFA',
+            warmWhite: '#FFFDFB',
+            // Authentic Sage & Emerald palette derived from Kajal's physical kankotri cover
+            sage: {
+              DEFAULT: '#345E45',
+              deep: '#234431',
+              dark: '#1B3526',
+              light: '#4E7D5F',
+              soft: '#EAF3ED',
+              tint: '#F3F8F5'
+            },
+            // Traditional Sindoor & Burgundy Kanku tones
             burgundy: {
               DEFAULT: '#8F1D32',
-              deep: '#701222',
-              dark: '#540B17',
-              light: '#A62A40',
+              deep: '#6E1223',
+              dark: '#520B18',
+              light: '#AB2842',
               soft: 'rgba(143, 29, 50, 0.08)'
             },
             rose: {
-              dusty: '#DDA8AC',
-              soft: '#F4D5D8',
               blush: '#FDF1F3',
-              deep: '#C9858A'
+              soft: '#F5D6DC',
+              dusty: '#D89EAA',
+              deep: '#B8586E'
             },
+            // Authentic Temple Antique Gold & Kesar tones
             gold: {
+              DEFAULT: '#C5A15D',
               antique: '#C5A15D',
               light: '#DFBF7F',
-              pale: '#F6EEDF',
-              dark: '#9F7C38'
+              pale: '#F7F2E7',
+              dark: '#9A7731',
+              bright: '#E5B842'
             },
             champagne: {
-              DEFAULT: '#E8D6CE',
-              light: '#F5ECE7',
-              dark: '#D6C0B7'
+              DEFAULT: '#E8DED4',
+              light: '#F5EFE9',
+              dark: '#D8C7B8'
             },
             charcoal: {
-              warm: '#51413F',
-              muted: '#7A6866'
+              warm: '#4D4240',
+              muted: '#766765'
             }
           },
           fontFamily: {
             serif: ['"Playfair Display"', 'Georgia', 'serif'],
             script: ['"Great Vibes"', 'cursive'],
-            lato: ['"Lato"', 'sans-serif'],
+            lato: ['"Plus Jakarta Sans"', '"Lato"', 'sans-serif'],
             cinzel: ['"Cinzel"', 'serif'],
             gujaratiSerif: ['"Noto Serif Gujarati"', 'serif'],
             gujarati: ['"Noto Sans Gujarati"', 'sans-serif']
@@ -77,11 +90,11 @@
     }
   </script>
 
-  <!-- Google Fonts: Great Vibes, Playfair Display, Lato, Noto Serif Gujarati, Noto Sans Gujarati, Cinzel -->
+  <!-- Google Fonts: Great Vibes, Playfair Display, Cinzel, Plus Jakarta Sans, Noto Serif Gujarati -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Noto+Serif+Gujarati:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Great+Vibes&family=Noto+Serif+Gujarati:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Lucide Icons -->
@@ -89,235 +102,264 @@
 
   <style>
     /* =====================================================================
-       1. ROOT DESIGN SYSTEM & PAPER TEXTURE
-       Ivory Cream base with subtle tactile grain & warm ambient lighting
+       1. ROOT DESIGN SYSTEM & AUTHENTIC KANKOTRI TEXTURE
+       Emerald Sage, Warm Ivory & Temple Gold with traditional filigree
        ===================================================================== */
     :root {
-      --color-ivory: #FAF6F0;
-      --color-warm-white: #FFFCFA;
+      --color-ivory: #FAF7F2;
+      --color-warm-white: #FFFDFB;
+      --color-sage: #345E45;
+      --color-sage-deep: #234431;
       --color-burgundy: #8F1D32;
-      --color-burgundy-deep: #701222;
       --color-gold: #C5A15D;
-      --color-dusty-rose: #DDA8AC;
-      --color-charcoal: #51413F;
-      --color-champagne: #E8D6CE;
-    }
-
-    /* SVG sizing safety */
-    svg {
-      display: inline-block;
-      vertical-align: middle;
+      --color-gold-light: #DFBF7F;
+      --color-gold-dark: #9A7731;
+      --color-champagne: #E8DED4;
+      --color-charcoal: #4D4240;
     }
 
     body {
-      background-color: #FAF6F0;
+      background-color: var(--color-ivory);
+      color: var(--color-charcoal);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background-image:
-        radial-gradient(circle at 50% 0%, rgba(255, 252, 250, 0.9) 0%, rgba(250, 246, 240, 0.6) 100%),
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.022'/%3E%3C/svg%3E");
-      color: #51413F;
-      font-family: 'Lato', sans-serif;
+        radial-gradient(circle at 10% 20%, rgba(52, 94, 69, 0.035) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(197, 161, 93, 0.045) 0%, transparent 45%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
     }
 
-    /* Gradients */
+    /* Traditional Indian Wedding Gradients */
+    .sage-gradient {
+      background: linear-gradient(135deg, #244231 0%, #345E45 50%, #447556 100%);
+    }
+
     .burgundy-gradient {
-      background: linear-gradient(135deg, #8F1D32 0%, #A62A40 50%, #701222 100%);
-    }
-
-    .burgundy-gradient-hover:hover {
-      background: linear-gradient(135deg, #701222 0%, #8F1D32 100%);
+      background: linear-gradient(135deg, #701222 0%, #8F1D32 50%, #A62A40 100%);
     }
 
     .gold-gradient {
-      background: linear-gradient(135deg, #C5A15D 0%, #DFBF7F 50%, #9F7C38 100%);
+      background: linear-gradient(135deg, #9A7731 0%, #C5A15D 50%, #DFBF7F 100%);
     }
 
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #8F1D32 0%, #C5A15D 50%, #8F1D32 100%);
+    .gold-foil-text {
+      background: linear-gradient(135deg, #9A7731 0%, #D4AF37 40%, #F5E5B8 60%, #9A7731 100%);
       -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      background-size: 200% auto;
-      animation: goldGleam 8s ease infinite;
+      -webkit-text-fill-color: transparent;
     }
 
-    @keyframes goldGleam {
-      0% {
-        background-position: 0% center;
-      }
-
-      50% {
-        background-position: 100% center;
-      }
-
-      100% {
-        background-position: 0% center;
-      }
+    .kankotri-card-border {
+      border: 1px solid rgba(197, 161, 93, 0.35);
+      box-shadow: 0 10px 30px -10px rgba(52, 94, 69, 0.08), 0 20px 45px -15px rgba(143, 29, 50, 0.06);
     }
 
-    /* Royal Double Frame */
     .royal-card-frame {
-      position: relative;
-      background-color: #FFFCFA;
-      border: 1px solid #C5A15D;
-      box-shadow:
-        0 0 0 4px #FAF6F0,
-        0 0 0 5px #E8D6CE,
-        0 15px 35px -5px rgba(143, 29, 50, 0.08),
-        0 0 40px -10px rgba(197, 161, 93, 0.12);
+      background: #FFFDFB;
+      border: 1px solid #E8DED4;
+      box-shadow: 0 16px 40px -12px rgba(52, 94, 69, 0.1), 0 4px 12px rgba(0, 0, 0, 0.02);
     }
 
-    .royal-inner-frame {
-      border: 1px solid rgba(197, 161, 93, 0.4);
-      outline: 1px dashed rgba(232, 214, 206, 0.7);
-      outline-offset: -5px;
+    /* Jaali (Lattice) Watermark Pattern from Physical Card */
+    .jaali-pattern {
+      background-image: radial-gradient(circle, #C5A15D 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.15;
     }
 
-    .royal-card-shadow {
-      box-shadow:
-        0 10px 30px -5px rgba(143, 29, 50, 0.07),
-        0 1px 3px 0 rgba(0, 0, 0, 0.03),
-        0 0 0 1px #E8D6CE;
+    .card-cover-jaali {
+      background-image: radial-gradient(circle, #345E45 1.2px, transparent 1.2px);
+      background-size: 20px 20px;
     }
 
-    .royal-card-hover {
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .royal-card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow:
-        0 20px 35px -10px rgba(143, 29, 50, 0.12),
-        0 0 0 1px rgba(197, 161, 93, 0.5),
-        0 0 20px rgba(197, 161, 93, 0.15);
-    }
-
-    /* Main Ceremony Glow */
-    .ceremony-featured {
-      position: relative;
-      border: 1.5px solid #C5A15D;
-      box-shadow:
-        0 0 0 3px #FAF6F0,
-        0 0 0 4px #C5A15D,
-        0 18px 40px -8px rgba(143, 29, 50, 0.15),
-        0 0 25px rgba(197, 161, 93, 0.25);
-    }
-
-    /* Falling rose petals canvas */
-    #petalCanvas {
+    /* 3D Envelope Experience */
+    #envelopeOverlay {
       position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: radial-gradient(circle at center, #FAF7F2 0%, #EFE8DD 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
+      overflow-y: auto;
+      padding: 1rem;
+    }
+
+    #envelopeOverlay.hidden-envelope {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .envelope-box {
+      width: 320px;
+      height: 220px;
+      position: relative;
+      background: #FFFDF9;
+      border-radius: 14px;
+      box-shadow: 0 25px 60px -15px rgba(52, 94, 69, 0.25), 0 10px 25px rgba(143, 29, 50, 0.15);
+      border: 2px solid #C5A15D;
+      perspective: 1200px;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    @media (min-width: 640px) {
+      .envelope-box {
+        width: 440px;
+        height: 290px;
+      }
+    }
+
+    .envelope-box:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 32px 70px -15px rgba(52, 94, 69, 0.32), 0 12px 30px rgba(197, 161, 93, 0.25);
+    }
+
+    .envelope-flap {
+      position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      right: 0;
+      height: 52%;
+      background: linear-gradient(175deg, #FFFDF9 0%, #F6EFE5 100%);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transform-origin: top center;
+      transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 10;
+      border-top: 2px solid #C5A15D;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .envelope-box.opened .envelope-flap {
+      transform: rotateX(175deg);
+      z-index: 1;
+    }
+
+    .envelope-letter {
+      position: absolute;
+      inset: 8px 12px;
+      background: #FFFDFB;
+      border: 1px dashed #C5A15D;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      z-index: 4;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .envelope-box.opened .envelope-letter {
+      transform: translateY(-80px) scale(1.04);
+    }
+
+    .wax-seal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #DFBF7F 0%, #C5A15D 60%, #9A7731 100%);
+      border: 2px solid #FAF7F2;
+      box-shadow: 0 6px 18px rgba(154, 119, 49, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 15;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .envelope-box:hover .wax-seal {
+      transform: translate(-50%, -50%) scale(1.08);
+      box-shadow: 0 8px 24px rgba(154, 119, 49, 0.6);
+    }
+
+    .envelope-box.opened .wax-seal {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    /* Falling Petals Canvas */
+    #petalCanvas {
+      position: fixed;
+      inset: 0;
       pointer-events: none;
-      z-index: 35;
+      z-index: 25;
     }
 
-    /* Corner Floral Gentle Sway */
-    @keyframes swayTopLeft {
-
-      0%,
-      100% {
-        transform: translate(0, 0) rotate(0deg);
-      }
-
-      50% {
-        transform: translate(2px, 3px) rotate(1deg);
-      }
+    /* Smooth Scroll & Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s ease-out, transform 0.75s ease-out;
     }
 
-    @keyframes swayBottomRight {
-
-      0%,
-      100% {
-        transform: rotate(180deg) translate(0, 0);
-      }
-
-      50% {
-        transform: rotate(181.2deg) translate(-2px, -3px);
-      }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .sway-tl {
-      animation: swayTopLeft 7s ease-in-out infinite;
-      transform-origin: top left;
+    /* Digit Pulse on Tick */
+    .digit-tick {
+      animation: digitPop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    .sway-br {
-      animation: swayBottomRight 7s ease-in-out infinite;
-      transform-origin: bottom right;
-    }
-
-    /* Interlocking Hearts Rhythmic Pulse */
-    @keyframes heartbeat {
-
-      0%,
-      100% {
+    @keyframes digitPop {
+      0% {
         transform: scale(1);
-        filter: drop-shadow(0 0 1px rgba(143, 29, 50, 0.2));
       }
 
-      14% {
+      50% {
         transform: scale(1.12);
-        filter: drop-shadow(0 0 6px rgba(221, 168, 172, 0.6));
+        color: #C5A15D;
       }
 
-      28% {
-        transform: scale(1);
-      }
-
-      42% {
-        transform: scale(1.06);
-        filter: drop-shadow(0 0 4px rgba(221, 168, 172, 0.4));
-      }
-
-      70% {
+      100% {
         transform: scale(1);
       }
     }
 
-    .heartbeat-anim {
-      animation: heartbeat 2.6s ease-in-out infinite;
-      transform-origin: center;
-    }
-
-    /* Monogram seal slow rotation */
-    @keyframes spinSeal {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .spin-slow {
-      animation: spinSeal 45s linear infinite;
-      transform-origin: center;
-    }
-
-    /* Divine Aura for Ganesha */
-    @keyframes divineHalo {
+    /* Subtle Floating & Sway Animations */
+    @keyframes gentleFloat {
 
       0%,
       100% {
-        filter: drop-shadow(0 0 3px rgba(197, 161, 93, 0.4)) drop-shadow(0 0 8px rgba(143, 29, 50, 0.2));
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    .float-slow {
+      animation: gentleFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        opacity: 0.6;
         transform: scale(1);
       }
 
       50% {
-        filter: drop-shadow(0 0 10px rgba(197, 161, 93, 0.7)) drop-shadow(0 0 14px rgba(221, 168, 172, 0.4));
-        transform: scale(1.02);
+        opacity: 1;
+        transform: scale(1.03);
       }
     }
 
-    .divine-halo {
-      animation: divineHalo 4s ease-in-out infinite;
-      transform-origin: center;
+    .pulse-glow {
+      animation: pulseGlow 3s ease-in-out infinite;
     }
 
-    /* Sound Equalizer Wave for Shehnai Music */
+    /* Sound Equalizer bars */
     @keyframes eqBar1 {
 
       0%,
@@ -334,11 +376,11 @@
 
       0%,
       100% {
-        height: 14px;
+        height: 12px;
       }
 
       50% {
-        height: 5px;
+        height: 6px;
       }
     }
 
@@ -366,308 +408,94 @@
       animation: eqBar3 0.9s ease-in-out infinite 0.3s;
     }
 
-    /* Top Sacred Header Traveling Light Shimmer */
-    .sacred-shimmer-bar {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .sacred-shimmer-bar::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(197, 161, 93, 0.15), rgba(255, 255, 255, 0.4), rgba(197, 161, 93, 0.15), transparent);
-      animation: headerShimmer 8s infinite ease-in-out;
-      pointer-events: none;
-    }
-
-    @keyframes headerShimmer {
-      0% {
-        left: -100%;
-      }
-
-      30%,
-      100% {
-        left: 140%;
-      }
-    }
-
-    /* Countdown Digit Pulse when changing */
-    .digit-tick {
-      animation: digitPop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    @keyframes digitPop {
-      0% {
-        transform: scale(1);
-      }
-
-      50% {
-        transform: scale(1.12);
-        color: #C5A15D;
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    /* Scroll Reveal Transition */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: opacity, transform;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Stagger Delays */
-    .delay-75 {
-      transition-delay: 75ms;
-    }
-
-    .delay-150 {
-      transition-delay: 150ms;
-    }
-
-    .delay-225 {
-      transition-delay: 225ms;
-    }
-
-    .delay-300 {
-      transition-delay: 300ms;
-    }
-
-    .delay-375 {
-      transition-delay: 375ms;
-    }
-
-    .delay-450 {
-      transition-delay: 450ms;
-    }
-
-    /* Toast Notification for Flower Shower & RSVP */
-    .blessing-toast {
-      position: fixed;
-      bottom: 85px;
-      right: 24px;
-      z-index: 60;
-      pointer-events: none;
-      animation: toastIn 3.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    @keyframes toastIn {
-      0% {
-        opacity: 0;
-        transform: translateY(15px) scale(0.9);
-      }
-
-      12% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-
-      82% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-
-      100% {
-        opacity: 0;
-        transform: translateY(-10px) scale(0.95);
-      }
-    }
-
-    /* =====================================================================
-       2. ROYAL ENVELOPE INTERACTIVE OPENING (FEATURE A)
-       ===================================================================== */
-    #envelopeOverlay {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      background: radial-gradient(circle at center, #FAF6F0 0%, #EBDCCE 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.9s ease;
-      perspective: 1200px;
-      overflow: hidden;
-    }
-
-    #envelopeOverlay.hidden-envelope {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    .envelope-box {
-      width: 92%;
-      max-width: 440px;
-      height: 310px;
-      position: relative;
-      background: #FAF6F0;
+    /* Featured Hast Melap glow */
+    .featured-ceremony-glow {
       border: 2px solid #C5A15D;
-      border-radius: 12px;
-      box-shadow:
-        0 25px 50px -12px rgba(143, 29, 50, 0.25),
-        0 0 0 6px #FAF6F0,
-        0 0 0 7px #E8D6CE;
-      transform-style: preserve-3d;
-      cursor: pointer;
-      transition: transform 0.4s ease;
-    }
-
-    .envelope-box:hover {
-      transform: translateY(-4px) scale(1.01);
-    }
-
-    /* Envelope Flap */
-    .envelope-flap {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      clip-path: polygon(0 0, 100% 0, 50% 55%);
-      background: linear-gradient(180deg, #F5ECE3 0%, #FAF6F0 100%);
-      border-bottom: 2px solid #C5A15D;
-      transform-origin: top center;
-      transition: transform 0.85s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 5;
-    }
-
-    .envelope-box.opened .envelope-flap {
-      transform: rotateX(180deg);
-      z-index: 1;
-    }
-
-    /* Wax Seal */
-    .wax-seal {
-      position: absolute;
-      top: 48%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 76px;
-      height: 76px;
-      background: radial-gradient(circle, #DFBF7F 0%, #C5A15D 60%, #9F7C38 100%);
-      border-radius: 50%;
-      box-shadow:
-        0 4px 15px rgba(159, 124, 56, 0.4),
-        inset 0 2px 4px rgba(255, 255, 255, 0.6),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.3);
-      border: 2px solid #FAF6F0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #701222;
-      z-index: 10;
-      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .envelope-box:hover .wax-seal {
-      transform: translate(-50%, -50%) scale(1.08);
-      box-shadow: 0 6px 20px rgba(159, 124, 56, 0.55);
-    }
-
-    /* Letter inside envelope */
-    .envelope-letter {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
-      background: #FFFCFA;
-      border: 1px solid #E8D6CE;
-      border-radius: 8px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-      z-index: 2;
-    }
-
-    .envelope-box.opened .envelope-letter {
-      transform: translateY(-80px) scale(1.05);
+      box-shadow: 0 0 25px rgba(197, 161, 93, 0.25), 0 15px 35px -10px rgba(52, 94, 69, 0.15);
     }
   </style>
 </head>
 
 <body
-  class="bg-ivory text-charcoal-warm font-lato selection:bg-rose-soft selection:text-burgundy relative overflow-x-hidden min-h-screen">
+  class="bg-ivory text-charcoal-warm font-lato selection:bg-sage-soft selection:text-sage-deep relative overflow-x-hidden min-h-screen">
 
   <!-- =====================================================================
-       ENVELOPE OPENING OVERLAY (FEATURE A: INTERACTIVE ROYAL INVITATION)
+       ENVELOPE OPENING OVERLAY (FEATURE 1: INTERACTIVE ROYAL KANKOTRI)
+       Faithfully stylized after Kajal's emerald & ivory physical card cover
        ===================================================================== -->
   <aside id="envelopeOverlay" aria-label="Interactive Royal Wedding Invitation Envelope">
 
     <!-- Direct Skip Button -->
     <button id="skipEnvelopeBtn"
-      class="absolute top-6 right-6 z-20 flex items-center gap-1.5 px-4 py-2 bg-warmWhite/90 hover:bg-warmWhite text-burgundy border border-champagne rounded-full shadow-md text-xs font-semibold tracking-wider transition-all hover:scale-105 cursor-pointer">
+      class="absolute top-6 right-6 z-20 flex items-center gap-1.5 px-4 py-2 bg-warmWhite/90 hover:bg-warmWhite text-sage-deep border border-champagne rounded-full shadow-md text-xs font-semibold tracking-wider transition-all hover:scale-105 cursor-pointer">
       <span>Skip to Invitation</span>
       <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
     </button>
 
     <div class="flex flex-col items-center justify-center p-4 max-w-lg w-full text-center">
 
-      <!-- Top Sacred Blessing -->
-      <div class="mb-4 text-burgundy font-serif text-xs md:text-sm font-bold tracking-[0.2em] uppercase divine-halo">
-        || Shri Ganeshay Namah ||
+      <!-- Top Sacred Blessings from Bride's Kankotri -->
+      <div class="mb-3 text-sage-deep font-serif text-xs md:text-sm font-bold tracking-[0.2em] uppercase">
+        || Shree Ambaji Matay Namah ||
+      </div>
+      <div class="text-[11px] md:text-xs text-gold-dark font-serif tracking-widest uppercase mb-4">
+        || Shree Ganeshay Namah || &bull; || Jai Gurudev || &bull; || Shree Meldi Matay Namah ||
       </div>
 
-      <p class="font-serif italic text-burgundy/80 text-sm md:text-base mb-6">
-        The Prajapati Family cordially requests the honor of your presence
+      <p class="font-serif italic text-sage/80 text-sm md:text-base mb-6">
+        The Prajapati Family cordially requests the honor of your gracious presence
       </p>
 
-      <!-- The 3D Envelope Box -->
+      <!-- The 3D Royal Kankotri Envelope Box -->
       <div id="interactiveEnvelope" class="envelope-box mb-6" role="button" tabindex="0"
-        aria-label="Click to open the wedding invitation envelope">
+        aria-label="Click to open Kajal and Dr. Kashyap's wedding invitation envelope">
 
-        <!-- Top Flap with decorative border -->
-        <div class="envelope-flap"></div>
+        <!-- Top Flap with ornamental gold arch tip -->
+        <div class="envelope-flap">
+          <div class="w-full h-full flex items-start justify-center pt-2">
+            <svg class="w-8 h-8 text-gold-antique/60" viewBox="0 0 40 40" fill="currentColor">
+              <path d="M20 2 C16 12 12 16 2 20 C12 24 16 28 20 38 C24 28 28 24 38 20 C28 16 24 12 20 2 Z" />
+            </svg>
+          </div>
+        </div>
 
         <!-- Sliding Wedding Letter Preview Inside -->
         <div class="envelope-letter">
-          <div class="text-gold-antique text-xs uppercase tracking-[0.25em] font-cinzel font-semibold mb-1">
-            Prajapati Family
+          <div class="text-gold-antique text-[10px] sm:text-xs uppercase tracking-[0.25em] font-cinzel font-bold mb-1">
+            Prajapati Family &bull; Bandhavad - Viramgam
           </div>
-          <div class="font-script text-3xl sm:text-4xl text-burgundy my-0.5">
+          <div class="font-script text-3xl sm:text-4xl text-sage-deep my-0.5">
             Wedding Invitation
           </div>
           <div class="font-serif text-base sm:text-lg font-bold text-burgundy mt-1 whitespace-nowrap">
-            Dr. Kashyap <span class="text-rose-dusty">♡</span> Kajal
+            Kajal <span class="text-rose-deep">&hearts;</span> Dr. Kashyap
           </div>
-          <div class="text-xs text-charcoal-muted mt-2">
-            29 November 2026 • Sunday
+          <div class="text-[11px] text-charcoal-muted mt-2 flex items-center gap-1.5 font-medium">
+            <i data-lucide="calendar" class="w-3 h-3 text-gold-antique"></i>
+            <span>Sunday, 29th November 2026</span>
+          </div>
+          <div class="text-[10px] text-sage font-semibold uppercase tracking-wider mt-0.5">
+            Shree Siddhnath Mahadev Mandir, Viramgam
           </div>
         </div>
 
-        <!-- Wax Seal Button -->
+        <!-- Royal Golden Medallion Wax Seal Button -->
         <div class="wax-seal">
-          <svg class="w-4 h-4 text-burgundy fill-current mb-0.5" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 text-sage-deep fill-current mb-0.5" viewBox="0 0 24 24">
             <path
               d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
           </svg>
-          <span class="font-cinzel text-xs font-bold tracking-widest text-burgundy">K ♡ K</span>
-          <span class="text-[9px] uppercase tracking-wider text-burgundy-dark font-bold mt-0.5">Open</span>
+          <span class="font-cinzel text-xs font-bold tracking-widest text-sage-deep">K &hearts; K</span>
+          <span class="text-[8px] uppercase tracking-wider text-sage-dark font-extrabold mt-0.5">Open</span>
         </div>
 
       </div>
 
-      <!-- Action helper text -->
-      <p class="text-xs text-burgundy font-medium tracking-wide flex items-center gap-1.5 animate-pulse">
+      <!-- Action helper text with glowing sparkles -->
+      <p class="text-xs text-sage-deep font-semibold tracking-wide flex items-center gap-2 animate-pulse">
         <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-antique"></i>
-        <span>Touch or click the royal wax seal to open</span>
+        <span>Tap the royal gold seal to open the invitation</span>
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-antique"></i>
       </p>
 
     </div>
@@ -679,87 +507,119 @@
   <canvas id="petalCanvas"></canvas>
 
   <!-- =====================================================================
-       FLOATING INTERACTIVE CONTROLS (DESKTOP VERTICAL TOOLBAR / MOBILE DOCK)
-       Preserves: Shower Flowers & Play Shehnai
+       FLOATING INTERACTIVE CONTROLS (DESKTOP FLOATING DOCK & MOBILE TOOLBAR)
+       - Shower Flowers (Pushpa Vrushti)
+       - Play/Pause Royal Shehnai Wedding Music (Royal Gujarati Wedding.mp3)
+       - Send Blessings (Aashirwad)
+       - View Original Printed Kankotri Photos
        ===================================================================== -->
   <aside aria-label="Interactive Controls" class="fixed z-40 transition-all duration-300
     /* Desktop: Right-side vertical toolbar */
     hidden md:flex md:flex-col md:items-end md:gap-3 md:right-6 md:bottom-8">
 
     <!-- 1. Pushpa Vrushti / Flower Shower -->
-    <button id="flowerShowerBtn" title="Shower flower petals of blessing"
-      class="group bg-warmWhite/95 hover:bg-warmWhite text-burgundy border border-champagne hover:border-gold-antique px-4 py-2.5 rounded-full shadow-lg backdrop-blur-md transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2 text-xs font-semibold cursor-pointer">
+    <button id="flowerShowerBtn" title="Shower fragrant flower petals of blessing"
+      class="group bg-warmWhite/95 hover:bg-warmWhite text-sage-deep border border-champagne hover:border-gold px-4 py-2.5 rounded-full shadow-lg backdrop-blur-md transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2 text-xs font-semibold cursor-pointer">
       <span class="text-base group-hover:scale-125 transition-transform duration-200">🌸</span>
-      <span id="flowerShowerLabel">Shower Flowers</span>
+      <span id="flowerShowerLabel">Shower Petals</span>
     </button>
 
-    <!-- 2. Shehnai Sound Synthesizer Toggle -->
+    <!-- 2. Traditional Shehnai Wedding Music Toggle -->
     <button id="musicToggle" title="Royal Gujarati Wedding Music"
-      class="group flex items-center gap-2.5 burgundy-gradient hover:brightness-110 text-white border border-rose-soft/40 px-4 py-2.5 rounded-full shadow-xl backdrop-blur-md transition-all duration-300 transform hover:scale-105 active:scale-95 text-xs font-medium tracking-wide cursor-pointer">
+      class="group flex items-center gap-2.5 sage-gradient hover:brightness-110 text-white border border-gold/40 px-4 py-2.5 rounded-full shadow-xl backdrop-blur-md transition-all duration-300 transform hover:scale-105 active:scale-95 text-xs font-medium tracking-wide cursor-pointer">
       <span id="musicIconWrapper" class="flex items-center justify-center">
         <i data-lucide="music" class="w-4 h-4 text-gold-light"></i>
       </span>
-      <span id="musicStatusText">Play Music</span>
+      <span id="musicStatusText">Play Shehnai</span>
+    </button>
+
+    <!-- 3. Send Aashirwad / Blessings Button -->
+    <button id="sendBlessingBtn" title="Send heartfelt wedding blessings"
+      class="group bg-warmWhite/95 hover:bg-warmWhite text-burgundy border border-champagne hover:border-burgundy/50 px-4 py-2.5 rounded-full shadow-md backdrop-blur-md transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2 text-xs font-semibold cursor-pointer">
+      <span class="text-base group-hover:scale-125 transition-transform duration-200">✨</span>
+      <span>Send Aashirwad</span>
+    </button>
+
+    <!-- 4. View Original Kankotri Gallery -->
+    <button id="viewKankotriBtn" title="View original printed wedding card photos"
+      class="group bg-warmWhite/95 hover:bg-warmWhite text-charcoal-warm border border-champagne hover:border-sage px-4 py-2.5 rounded-full shadow-md backdrop-blur-md transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2 text-xs font-semibold cursor-pointer">
+      <i data-lucide="image" class="w-4 h-4 text-sage"></i>
+      <span>Original Card</span>
+    </button>
+
+    <!-- 5. Reopen Envelope -->
+    <button id="reopenEnvelopeBtn" title="Re-open the interactive envelope"
+      class="bg-warmWhite/90 hover:bg-warmWhite text-charcoal-muted hover:text-sage-deep border border-champagne w-9 h-9 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 cursor-pointer">
+      <i data-lucide="mail-open" class="w-4 h-4"></i>
     </button>
   </aside>
 
-  <!-- Mobile Floating Pill Dock (Compact & Non-intrusive) -->
-  <div
-    class="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-40 bg-warmWhite/95 backdrop-blur-md border border-champagne shadow-2xl rounded-full px-3 py-1.5 flex items-center gap-2">
-    <!-- Flower Shower Mobile -->
-    <button id="flowerShowerBtnMobile" title="Shower Flowers"
-      class="p-2 text-burgundy hover:bg-rose-blush rounded-full transition active:scale-90 text-sm">
-      🌸
+  <!-- Mobile Floating Dock (Bottom Fixed Bar) -->
+  <div class="md:hidden fixed bottom-3 left-3 right-3 z-40 bg-warmWhite/95 backdrop-blur-md rounded-2xl border border-champagne shadow-2xl p-2 flex items-center justify-around gap-1.5">
+    <!-- Shower Petals -->
+    <button id="flowerShowerBtnMobile"
+      class="flex-1 py-2 px-1 flex flex-col items-center justify-center text-[10px] font-bold text-sage-deep active:scale-95 transition">
+      <span class="text-base mb-0.5">🌸</span>
+      <span>Shower</span>
     </button>
-    <div class="w-px h-4 bg-champagne"></div>
-    <!-- Music Mobile -->
-    <button id="musicToggleMobile" title="Royal Gujarati Wedding Music"
-      class="flex items-center gap-1.5 px-3 py-1.5 burgundy-gradient text-white rounded-full text-xs font-medium shadow active:scale-95">
-      <span id="musicIconWrapperMobile"><i data-lucide="music" class="w-3.5 h-3.5 text-gold-light"></i></span>
+
+    <!-- Play/Pause Music -->
+    <button id="musicToggleMobile"
+      class="flex-1 py-2 px-1.5 sage-gradient text-white rounded-xl flex flex-col items-center justify-center text-[10px] font-semibold active:scale-95 shadow-md transition">
+      <span id="musicIconWrapperMobile" class="mb-0.5">
+        <i data-lucide="music" class="w-3.5 h-3.5 text-gold-light"></i>
+      </span>
       <span id="musicStatusTextMobile">Music</span>
+    </button>
+
+    <!-- Send Aashirwad -->
+    <button id="sendBlessingBtnMobile"
+      class="flex-1 py-2 px-1 flex flex-col items-center justify-center text-[10px] font-bold text-burgundy active:scale-95 transition">
+      <span class="text-base mb-0.5">✨</span>
+      <span>Aashirwad</span>
+    </button>
+
+    <!-- View Original Card -->
+    <button id="viewKankotriBtnMobile"
+      class="flex-1 py-2 px-1 flex flex-col items-center justify-center text-[10px] font-bold text-charcoal-warm active:scale-95 transition">
+      <i data-lucide="image" class="w-4 h-4 text-sage mb-0.5"></i>
+      <span>Card</span>
     </button>
   </div>
 
   <!-- =====================================================================
        TOP SACRED INVOCATIONS HEADER
-       "|| Jai Yogeshwar || • || Shri Ganeshay Namah || • || Shri Brahmani Matay Namah ||"
+       "|| Shree Ambaji Matay Namah || • || Shree Ganeshay Namah || • || Shree Meldi Matay Namah || • || Jai Gurudev ||"
        ===================================================================== -->
-  <header
-    class="sacred-shimmer-bar bg-warmWhite/90 backdrop-blur-md border-b border-champagne py-2.5 px-4 text-center sticky top-0 z-30 transition-all duration-300">
-    <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center text-xs text-burgundy font-medium">
+  <header class="w-full bg-warmWhite/90 border-b border-champagne/80 sticky top-0 z-30 backdrop-blur-md transition-all">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex items-center justify-between">
 
-      <!-- Re-open Envelope shortcut -->
-      <button id="reopenEnvelopeBtn"
-        class="hidden sm:inline-flex items-center gap-1 text-[11px] text-charcoal-muted hover:text-burgundy tracking-wide transition cursor-pointer">
-        <i data-lucide="mail" class="w-3.5 h-3.5 text-gold-antique"></i>
-        <span>Reopen Envelope</span>
-      </button>
-
-      <!-- Sacred Invocations Center -->
-      <div
-        class="flex-1 flex flex-wrap justify-center items-center gap-1.5 sm:gap-4 md:gap-6 font-serif font-semibold text-[11px] sm:text-xs md:text-sm tracking-wide">
-        <span>|| Jai Yogeshwar ||</span>
-        <span class="text-gold-antique hidden sm:inline">❖</span>
-        <span class="flex items-center gap-1 text-burgundy-deep">
-          <!-- Auspicious Sacred Lamp / Diya Emblem -->
-          <svg class="w-4 h-4 text-gold-antique inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2c-.8 1.2-1.5 2.5-1.5 3.8 0 1.5 1.5 2.2 1.5 2.2s1.5-.7 1.5-2.2C13.5 4.5 12.8 3.2 12 2z"
-              fill="#C5A15D" />
-            <path d="M4 14c0 4.4 3.6 7 8 7s8-2.6 8-7H4z" fill="#8F1D32" stroke="#C5A15D" />
-            <path d="M3 14h18" stroke="#C5A15D" />
-          </svg>
-          || Shri Ganeshay Namah ||
+      <!-- Left Badge / Monogram -->
+      <a href="#hero-card" class="flex items-center gap-2 group">
+        <span class="w-7 h-7 rounded-full sage-gradient text-white flex items-center justify-center font-cinzel text-xs font-bold shadow-xs">
+          K
         </span>
-        <span class="text-gold-antique hidden sm:inline">❖</span>
-        <span>|| Shri Brahmani Matay Namah ||</span>
+        <span class="font-serif font-bold text-sm text-sage-deep tracking-wider hidden xs:inline">
+          Kajal & Dr. Kashyap
+        </span>
+      </a>
+
+      <!-- Central Sacred Deities Mantras -->
+      <div class="flex items-center justify-center gap-2 sm:gap-3 text-xs md:text-sm font-serif font-bold text-sage-deep tracking-wider text-center">
+        <span class="text-burgundy">|| શ્રી અંબાજી માતાય નમઃ ||</span>
+        <span class="text-gold-antique hidden sm:inline">&bull;</span>
+        <span class="text-sage-deep hidden sm:inline">|| શ્રી ગણેશાય નમઃ ||</span>
+        <span class="text-gold-antique hidden md:inline">&bull;</span>
+        <span class="text-burgundy hidden md:inline">|| શ્રી મેલડી માતાય નમઃ ||</span>
+        <span class="text-gold-antique hidden lg:inline">&bull;</span>
+        <span class="text-gold-dark hidden lg:inline">|| જય ગુરુદેવ ||</span>
       </div>
 
-      <!-- Quick Date Badge -->
-      <span class="hidden md:inline-flex items-center gap-1 text-[11px] text-charcoal-muted font-sans">
-        <i data-lucide="calendar" class="w-3 h-3 text-gold-antique"></i>
-        29 Nov 2026
-      </span>
+      <!-- Quick Wedding Date Badge -->
+      <div class="flex items-center gap-1.5 text-xs text-charcoal-muted font-medium bg-ivory px-3 py-1 rounded-full border border-champagne">
+        <i data-lucide="calendar" class="w-3.5 h-3.5 text-gold-antique"></i>
+        <span>29 Nov 2026</span>
+      </div>
     </div>
   </header>
 
@@ -770,319 +630,195 @@
     <div class="max-w-4xl mx-auto space-y-10 sm:space-y-14">
 
       <!-- =================================================================
-           SECTION 5: HERO COVER CARD – COMPLETE VISUAL REDESIGN
+           SECTION 1: HERO COVER CARD – AUTHENTIC KANKOTRI JHAROKHA ARCH
+           Recreated from Kajal's printed card with Lord Ganesha, floral vines,
+           emerald green borders, and authentic Gujarati typography.
            ================================================================= -->
       <section id="hero-card"
-        class="royal-card-frame rounded-[24px] md:rounded-[32px] p-6 sm:p-10 md:p-14 relative overflow-hidden text-center">
+        class="royal-card-frame rounded-[24px] md:rounded-[32px] p-6 sm:p-10 md:p-14 relative overflow-hidden text-center kankotri-card-border">
 
-        <!-- Inner dashed filigree accent frame -->
-        <div
-          class="absolute inset-3 sm:inset-4 rounded-[20px] md:rounded-[28px] border border-champagne pointer-events-none">
-        </div>
+        <!-- Outer Decorative Filigree Corner Motifs -->
+        <div class="absolute top-3 left-3 w-12 h-12 border-t-2 border-l-2 border-gold-antique rounded-tl-xl pointer-events-none opacity-60"></div>
+        <div class="absolute top-3 right-3 w-12 h-12 border-t-2 border-r-2 border-gold-antique rounded-tr-xl pointer-events-none opacity-60"></div>
+        <div class="absolute bottom-3 left-3 w-12 h-12 border-b-2 border-l-2 border-gold-antique rounded-bl-xl pointer-events-none opacity-60"></div>
+        <div class="absolute bottom-3 right-3 w-12 h-12 border-b-2 border-r-2 border-gold-antique rounded-br-xl pointer-events-none opacity-60"></div>
 
-        <!-- 1. CORNER FLORAL BOTANICAL ILLUSTRATION (Top-Left Pink Cosmos Bouquet from physical card) -->
-        <div
-          class="absolute top-0 left-0 w-36 h-36 sm:w-52 sm:h-52 md:w-64 md:h-64 pointer-events-none select-none z-10 sway-tl">
-          <svg viewBox="0 0 200 200" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Stems and green foliage -->
-            <path d="M10 0 C25 40 40 85 85 105" stroke="#7A9368" stroke-width="2.2" stroke-linecap="round" />
-            <path d="M0 30 C30 50 60 70 65 130" stroke="#8CA679" stroke-width="1.8" stroke-linecap="round" />
-            <path d="M5 5 C45 25 90 40 120 70" stroke="#7A9368" stroke-width="2" stroke-linecap="round" />
-            <path d="M40 70 Q55 55 70 72 Q55 85 40 70Z" fill="#8CA679" opacity="0.75" />
-            <path d="M25 45 Q40 30 50 48 Q35 60 25 45Z" fill="#7A9368" opacity="0.8" />
-            <path d="M65 95 Q85 85 95 105 Q75 115 65 95Z" fill="#8CA679" opacity="0.7" />
-            <path d="M85 50 Q105 45 110 65 Q92 72 85 50Z" fill="#6B8259" opacity="0.75" />
+        <!-- Subtle Card Background Jaali Motif -->
+        <div class="absolute inset-0 card-cover-jaali opacity-5 pointer-events-none"></div>
 
-            <!-- Flower 1 (Large pink cosmos bloom) -->
-            <g transform="translate(42, 42)">
-              <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#F49EB1" opacity="0.95" />
-              <ellipse cx="16" cy="-16" rx="7" ry="14" transform="rotate(45 16 -16)" fill="#F8B4C3" opacity="0.95" />
-              <ellipse cx="22" cy="0" rx="7" ry="14" transform="rotate(90 22 0)" fill="#F49EB1" opacity="0.95" />
-              <ellipse cx="16" cy="16" rx="7" ry="14" transform="rotate(135 16 16)" fill="#F8B4C3" opacity="0.95" />
-              <ellipse cx="0" cy="22" rx="7" ry="14" transform="rotate(180 0 22)" fill="#F49EB1" opacity="0.95" />
-              <ellipse cx="-16" cy="16" rx="7" ry="14" transform="rotate(225 -16 16)" fill="#F8B4C3" opacity="0.95" />
-              <ellipse cx="-22" cy="0" rx="7" ry="14" transform="rotate(270 -22 0)" fill="#F49EB1" opacity="0.95" />
-              <ellipse cx="-16" cy="-16" rx="7" ry="14" transform="rotate(315 -16 -16)" fill="#F8B4C3" opacity="0.95" />
-              <!-- Center pistil in antique gold & burgundy -->
-              <circle cx="0" cy="0" r="7" fill="#C5A15D" />
-              <circle cx="0" cy="0" r="4.5" fill="#8F1D32" />
-            </g>
+        <div class="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
 
-            <!-- Flower 2 (Medium pink bloom) -->
-            <g transform="translate(100, 32) scale(0.75)">
-              <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#F8B4C3" />
-              <ellipse cx="14" cy="-14" rx="6" ry="13" transform="rotate(45 14 -14)" fill="#F49EB1" />
-              <ellipse cx="20" cy="0" rx="6" ry="13" transform="rotate(90 20 0)" fill="#F8B4C3" />
-              <ellipse cx="14" cy="14" rx="6" ry="13" transform="rotate(135 14 14)" fill="#F49EB1" />
-              <ellipse cx="0" cy="20" rx="6" ry="13" transform="rotate(180 0 20)" fill="#F8B4C3" />
-              <ellipse cx="-14" cy="14" rx="6" ry="13" transform="rotate(225 -14 14)" fill="#F49EB1" />
-              <ellipse cx="-20" cy="0" rx="6" ry="13" transform="rotate(270 -20 0)" fill="#F8B4C3" />
-              <ellipse cx="-14" cy="-14" rx="6" ry="13" transform="rotate(315 -14 -14)" fill="#F49EB1" />
-              <circle cx="0" cy="0" r="6" fill="#C5A15D" />
-              <circle cx="0" cy="0" r="3.5" fill="#8F1D32" />
-            </g>
-
-            <!-- Flower 3 (Small blossom) -->
-            <g transform="translate(30, 110) scale(0.65)">
-              <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#F8B4C3" />
-              <ellipse cx="14" cy="-14" rx="6" ry="13" transform="rotate(45 14 -14)" fill="#F49EB1" />
-              <ellipse cx="20" cy="0" rx="6" ry="13" transform="rotate(90 20 0)" fill="#F8B4C3" />
-              <ellipse cx="14" cy="14" rx="6" ry="13" transform="rotate(135 14 14)" fill="#F49EB1" />
-              <ellipse cx="0" cy="20" rx="6" ry="13" transform="rotate(180 0 20)" fill="#F8B4C3" />
-              <ellipse cx="-14" cy="14" rx="6" ry="13" transform="rotate(225 -14 14)" fill="#F49EB1" />
-              <circle cx="0" cy="0" r="5" fill="#C5A15D" />
-            </g>
-          </svg>
-        </div>
-
-        <!-- 2. CORNER FLORAL BOTANICAL ILLUSTRATION (Bottom-Right Pink Cosmos Bouquet) -->
-        <div
-          class="absolute bottom-0 right-0 w-36 h-36 sm:w-52 sm:h-52 md:w-64 md:h-64 pointer-events-none select-none z-10 sway-br">
-          <svg viewBox="0 0 200 200" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 0 C25 40 40 85 85 105" stroke="#7A9368" stroke-width="2.2" stroke-linecap="round" />
-            <path d="M0 30 C30 50 60 70 65 130" stroke="#8CA679" stroke-width="1.8" stroke-linecap="round" />
-            <path d="M5 5 C45 25 90 40 120 70" stroke="#7A9368" stroke-width="2" stroke-linecap="round" />
-            <path d="M40 70 Q55 55 70 72 Q55 85 40 70Z" fill="#8CA679" opacity="0.75" />
-            <path d="M25 45 Q40 30 50 48 Q35 60 25 45Z" fill="#7A9368" opacity="0.8" />
-            <path d="M65 95 Q85 85 95 105 Q75 115 65 95Z" fill="#8CA679" opacity="0.7" />
-            <g transform="translate(42, 42)">
-              <ellipse cx="0" cy="-22" rx="7" ry="14" fill="#F49EB1" opacity="0.95" />
-              <ellipse cx="16" cy="-16" rx="7" ry="14" transform="rotate(45 16 -16)" fill="#F8B4C3" opacity="0.95" />
-              <ellipse cx="22" cy="0" rx="7" ry="14" transform="rotate(90 22 0)" fill="#F49EB1" opacity="0.95" />
-              <ellipse cx="16" cy="16" rx="7" ry="14" transform="rotate(135 16 16)" fill="#F8B4C3" opacity="0.95" />
-              <ellipse cx="0" cy="22" rx="7" ry="14" transform="rotate(180 0 22)" fill="#F49EB1" opacity="0.95" />
-              <ellipse cx="-16" cy="16" rx="7" ry="14" transform="rotate(225 -16 16)" fill="#F8B4C3" opacity="0.95" />
-              <ellipse cx="-22" cy="0" rx="7" ry="14" transform="rotate(270 -22 0)" fill="#F49EB1" opacity="0.95" />
-              <ellipse cx="-16" cy="-16" rx="7" ry="14" transform="rotate(315 -16 -16)" fill="#F8B4C3" opacity="0.95" />
-              <circle cx="0" cy="0" r="7" fill="#C5A15D" />
-              <circle cx="0" cy="0" r="4.5" fill="#8F1D32" />
-            </g>
-            <g transform="translate(100, 32) scale(0.75)">
-              <ellipse cx="0" cy="-20" rx="6" ry="13" fill="#F8B4C3" />
-              <ellipse cx="14" cy="-14" rx="6" ry="13" transform="rotate(45 14 -14)" fill="#F49EB1" />
-              <ellipse cx="20" cy="0" rx="6" ry="13" transform="rotate(90 20 0)" fill="#F8B4C3" />
-              <ellipse cx="14" cy="14" rx="6" ry="13" transform="rotate(135 14 14)" fill="#F49EB1" />
-              <ellipse cx="0" cy="20" rx="6" ry="13" transform="rotate(180 0 20)" fill="#F8B4C3" />
-              <circle cx="0" cy="0" r="6" fill="#C5A15D" />
-            </g>
-          </svg>
-        </div>
-
-        <!-- 3. Soft blush accent blurs in bottom-left (faithfully matching physical card) -->
-        <div class="absolute -bottom-10 -left-10 w-36 h-36 rounded-full bg-rose-soft/40 blur-2xl pointer-events-none">
-        </div>
-        <div class="absolute bottom-16 left-8 w-4 h-4 rounded-full bg-rose-dusty/40 pointer-events-none"></div>
-        <div class="absolute bottom-24 left-16 w-2.5 h-2.5 rounded-full bg-rose-dusty/30 pointer-events-none"></div>
-
-        <!-- 4. HERO SECTION CONTENT -->
-        <div class="relative z-20 flex flex-col items-center max-w-2xl mx-auto">
-
-          <!-- Lord Ganesha Sacred Line Art -->
-          <div class="mb-3 divine-halo inline-block" title="Lord Ganesha">
-            <svg class="w-14 h-14 md:w-16 md:h-16 text-burgundy mx-auto" viewBox="0 0 100 100" fill="none"
-              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Ganesha Head & Mukut -->
-              <path d="M50 12 L50 25" />
-              <path d="M43 18 Q50 10 57 18 Q50 24 43 18 Z" fill="currentColor" opacity="0.3" />
-              <!-- Crown arches -->
-              <path d="M38 28 Q50 20 62 28" />
-              <!-- Forehead Tilak -->
-              <path d="M48 30 L52 30 M47 34 L53 34 M50 28 L50 38" stroke-width="2.5" />
-              <circle cx="50" cy="38" r="1.5" fill="currentColor" />
-              <!-- Face, Trunk & Ears -->
-              <path d="M35 32 C26 32 24 44 28 50 C32 55 36 50 38 45" />
-              <path d="M65 32 C74 32 76 44 72 50 C68 55 64 50 62 45" />
-              <!-- Trunk Curve -->
-              <path d="M44 42 C44 55 42 66 52 68 C60 70 63 62 58 58 C54 55 48 58 48 61" stroke-width="2.5" />
-              <!-- Auspicious Modak / Lotus -->
-              <path d="M26 62 Q30 58 35 62 Q30 68 26 62 Z" fill="currentColor" opacity="0.4" />
-              <path d="M41 48 L37 50" stroke-width="3" />
-            </svg>
+          <!-- 1. Sacred Golden Lord Ganesha & Kalash Medallion -->
+          <div class="mb-5 relative flex items-center justify-center">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-gold-light via-gold to-gold-dark p-0.5 shadow-xl flex items-center justify-center float-slow">
+              <div class="w-full h-full rounded-full bg-warmWhite flex items-center justify-center border border-gold-light/40 relative">
+                <!-- Custom SVG Lord Ganesha Motif (from traditional Gujarati kankotri) -->
+                <svg class="w-12 h-12 sm:w-14 sm:h-14 text-sage-deep" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <!-- Crown / Mukut -->
+                  <path d="M26 12 L32 6 L38 12 L35 15 L29 15 Z" fill="#C5A15D" stroke="#9A7731" stroke-width="1.2" />
+                  <circle cx="32" cy="5" r="1.5" fill="#8F1D32" />
+                  <!-- Tilak -->
+                  <path d="M32 16 L32 23" stroke="#8F1D32" stroke-width="2" />
+                  <circle cx="32" cy="20" r="1" fill="#DFBF7F" />
+                  <!-- Forehead and Ears -->
+                  <path d="M24 18 C16 18 14 26 18 32 C22 34 26 32 26 26" />
+                  <path d="M40 18 C48 18 50 26 46 32 C42 34 38 32 38 26" />
+                  <!-- Trunk -->
+                  <path d="M32 22 Q34 32 36 38 Q38 44 42 43 Q45 42 44 38 Q42 35 38 36" />
+                  <!-- Sacred Modak in trunk -->
+                  <circle cx="43" cy="38" r="2.2" fill="#DFBF7F" stroke="#9A7731" stroke-width="1" />
+                  <!-- Lotus Base -->
+                  <path d="M20 54 Q32 46 44 54 Q32 58 20 54 Z" fill="#EAF3ED" stroke="#345E45" stroke-width="1.5" />
+                  <path d="M26 50 Q32 44 38 50" stroke="#345E45" stroke-width="1.2" />
+                </svg>
+              </div>
+            </div>
           </div>
 
-          <!-- Family Introduction -->
-          <p class="font-serif text-burgundy text-sm md:text-base tracking-[0.18em] uppercase font-semibold">
-            Prajapati Family Cordially Invites You
+          <!-- 2. Auspicious Kuldevi & Deity Invocations -->
+          <div class="space-y-1 mb-5">
+            <div class="text-xs uppercase tracking-[0.25em] font-cinzel font-bold text-gold-dark flex items-center justify-center gap-2">
+              <span class="w-6 sm:w-10 h-px bg-gold-antique/60"></span>
+              <span>|| Shree Ambaji Matay Namah ||</span>
+              <span class="w-6 sm:w-10 h-px bg-gold-antique/60"></span>
+            </div>
+            <div class="text-[11px] font-serif text-charcoal-muted tracking-wide">
+              || Shree Ganeshay Namah || &bull; || Jai Gurudev || &bull; || Shree Meldi Matay Namah ||
+            </div>
+          </div>
+
+          <!-- 3. Sacred Warm Invitation Text from Bride's Parents -->
+          <p class="font-serif italic text-charcoal-warm text-sm sm:text-base leading-relaxed mb-6 px-2">
+            With the boundless divine blessings and grace of our revered Kuldevi <strong class="text-burgundy font-semibold">Shree Ambaji Mataji</strong>,<br>
+            Native of <strong class="text-sage-deep font-semibold">Bandhavad</strong> (Presently Viramgam),<br class="hidden sm:inline">
+            <span class="font-semibold text-charcoal-warm">Akhand Saubhagyavati Jyotsnaben & Shri Bharatbhai Parsottambhai Prajapati</span><br>
+            cordially invite you to grace the auspicious wedding ceremony of their beloved daughter
           </p>
 
-          <!-- Main Decorative Title -->
-          <h1 class="font-script text-4xl sm:text-5xl md:text-6xl text-burgundy tracking-wide my-1">
-            Wedding <span
-              class="font-serif italic text-3xl sm:text-4xl md:text-5xl text-burgundy-deep">invitation</span>
-          </h1>
+          <!-- 4. Grand Couple Presentation -->
+          <div class="w-full py-4 my-2 border-y border-champagne relative bg-gradient-to-r from-transparent via-sage-tint to-transparent rounded-2xl">
 
-          <!-- Wedding Couple Line Illustration (Groom & Bride holding hands, faithfully from Card 1) -->
-          <div class="my-4">
-            <svg class="w-24 h-24 sm:w-28 sm:h-28 text-burgundy mx-auto" viewBox="0 0 100 100" fill="none"
-              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Groom Head & Hair -->
-              <ellipse cx="40" cy="24" rx="5" ry="6" />
-              <path d="M36 21 Q40 17 44 21" />
-              <!-- Groom Shoulders & Sherwani -->
-              <path d="M40 30 L40 68" />
-              <path d="M40 31 L32 37 L30 55 L35 55" />
-              <path d="M40 31 L47 37 L48 52" />
-              <path d="M38 31 L40 36 L42 31" />
-              <!-- Groom Trouser -->
-              <path d="M35 68 L34 90" />
-              <path d="M42 68 L43 90" />
-
-              <!-- Bride Head & Traditional Hair Bun -->
-              <ellipse cx="58" cy="26" rx="4.5" ry="5.5" />
-              <path d="M60 21 Q65 24 62 28" />
-              <!-- Bride Flowing Dupatta -->
-              <path d="M61 24 C68 32 74 55 78 82" stroke-dasharray="2 2" stroke-width="1.4" />
-              <!-- Bride Torso & Hand reaching groom -->
-              <path d="M58 31.5 L58 45" />
-              <path d="M54 36 L50 52" />
-              <!-- Bride Lehenga Skirt -->
-              <path d="M54 45 L48 85 Q62 90 74 85 L62 45 Z" />
-              <path d="M53 58 Q60 61 68 58" stroke-width="1.2" opacity="0.6" />
-              <path d="M51 72 Q61 75 71 72" stroke-width="1.2" opacity="0.6" />
-
-              <!-- Joined Hands -->
-              <path d="M48 52 Q49 54 50 52" stroke-width="2.5" stroke="#C5A15D" />
-            </svg>
-          </div>
-
-          <!-- Main Couple Names: Dr. Kashyap ♡ Kajal -->
-          <div class="my-3 flex items-center justify-center gap-1.5 sm:gap-3 text-burgundy max-w-full px-2">
-            <span class="font-serif italic text-lg xs:text-xl sm:text-3xl md:text-4xl font-normal text-burgundy-light whitespace-nowrap">Dr.</span>
-            <span
-              class="font-serif font-bold text-2xl xs:text-3xl sm:text-4xl md:text-5xl tracking-tight text-burgundy whitespace-nowrap">Kashyap</span>
-
-            <!-- Interlocking Outline Hearts (faithfully matching Card 1) -->
-            <span class="inline-flex items-center shrink-0 mx-0.5 sm:mx-1 text-burgundy heartbeat-anim" title="United in Love">
-              <svg class="w-5 h-5 xs:w-6 xs:h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 text-burgundy fill-none" viewBox="0 0 40 30" stroke="currentColor"
-                stroke-width="1.8">
-                <path
-                  d="M12 22 C6 17 2 12 2 7 C2 3 5 1 9 1 C12 1 14 3 15 5 C16 3 18 1 21 1 C25 1 28 3 28 7 C28 12 24 17 18 22 L15 25 Z" />
-                <path
-                  d="M22 24 C17 19 14 15 14 10 C14 7 16 5 19 5 C22 5 24 7 25 9 C26 7 28 5 31 5 C35 5 38 7 38 10 C38 15 34 19 28 24 L25 27 Z" />
-              </svg>
-            </span>
-
-            <span
-              class="font-serif font-bold text-2xl xs:text-3xl sm:text-4xl md:text-5xl tracking-tight text-burgundy whitespace-nowrap">Kajal</span>
-          </div>
-
-          <!-- Auspicious Wedding Date with Gold Filigree Underline -->
-          <div class="mt-3 mb-6">
-            <p class="font-serif text-lg sm:text-xl text-burgundy font-medium tracking-wide">
-              29 November 2026 – Sunday
-            </p>
-            <!-- Decorative filigree divider line -->
-            <div class="flex items-center justify-center gap-2 mt-2 text-gold-antique">
-              <span class="w-12 sm:w-20 h-px bg-gold-antique/60"></span>
-              <svg class="w-6 h-3 text-gold-antique fill-current" viewBox="0 0 24 12">
-                <path
-                  d="M12 2 C9 2 8 6 4 6 C2 6 0 5 0 5 C0 5 2 8 5 8 C9 8 10 4 12 4 C14 4 15 8 19 8 C22 8 24 5 24 5 C24 5 22 6 20 6 C16 6 15 2 12 2 Z" />
-              </svg>
-              <span class="w-12 sm:w-20 h-px bg-gold-antique/60"></span>
-            </div>
-          </div>
-
-          <!-- Bottom Section: Twin K/K Monogram Seals & Groom Family Details -->
-          <div
-            class="w-full mt-4 pt-4 border-t border-champagne/70 flex flex-col md:flex-row items-center justify-between gap-6">
-
-            <!-- Left Circular Monogram Seal (K/K) -->
-            <div class="w-20 h-20 sm:w-22 sm:h-22 relative flex items-center justify-center text-burgundy"
-              title="Kashyap & Kajal Monogram">
-              <svg class="w-full h-full text-gold-antique spin-slow" viewBox="0 0 100 100" fill="none"
-                stroke="currentColor">
-                <circle cx="50" cy="50" r="46" stroke-width="1.2" stroke-dasharray="3 3" />
-                <circle cx="50" cy="50" r="41" stroke-width="1.5" />
-                <circle cx="50" cy="50" r="32" stroke-width="1" />
-                <path d="M50 5 Q54 14 50 18 Q46 14 50 5Z" fill="currentColor" />
-                <path d="M50 95 Q54 86 50 82 Q46 86 50 95Z" fill="currentColor" />
-                <path d="M5 50 Q14 54 18 50 Q14 46 5 50Z" fill="currentColor" />
-                <path d="M95 50 Q86 54 82 50 Q86 46 95 50Z" fill="currentColor" />
-                <path d="M18 18 Q26 24 24 28 Q20 26 18 18Z" fill="currentColor" />
-                <path d="M82 18 Q74 24 76 28 Q80 26 82 18Z" fill="currentColor" />
-                <path d="M18 82 Q26 76 24 72 Q20 74 18 82Z" fill="currentColor" />
-                <path d="M82 82 Q74 76 76 72 Q80 74 82 82Z" fill="currentColor" />
-              </svg>
-              <div
-                class="absolute inset-0 flex items-center justify-center font-cinzel text-lg sm:text-xl font-bold tracking-widest text-burgundy">
-                <span>K</span><span class="text-xs font-light mx-0.5 text-gold-antique">/</span><span>K</span>
-              </div>
-            </div>
-
-            <!-- Central Family & Contact Information (Directly from Card 1) -->
-            <div class="text-center text-burgundy max-w-md">
-              <span class="font-serif font-bold text-xs tracking-[0.2em] uppercase block mb-1 text-gold-antique">: From
-                :</span>
-              <h2 class="font-serif font-bold text-base sm:text-lg text-burgundy leading-tight">
-                Dr. Rakeshbhai H. Prajapati
-              </h2>
-              <h3 class="font-serif font-semibold text-base sm:text-lg text-burgundy leading-tight mb-2">
-                Mrs. Sangitaben R. Prajapati
-              </h3>
-
-              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
-                2, Pramukh Green Society, Opp. Akshtam-1,<br>
-                Akesan fatak, Opp. Upasana School, Palanpur
+            <!-- Bride Name (Top Honor in Bride's Kankotri) -->
+            <div class="flex flex-col items-center">
+              <span class="text-xs uppercase tracking-[0.25em] font-cinzel text-sage font-bold mb-1">
+                Chi. (Daughter)
+              </span>
+              <h1 class="font-serif font-extrabold text-3xl xs:text-4xl sm:text-5xl md:text-6xl text-sage-deep tracking-tight">
+                Kajal
+              </h1>
+              <p class="text-xs sm:text-sm font-medium text-charcoal-muted mt-1">
+                Daughter of A.Sau. Jyotsnaben & Shri Bharatbhai Parsottambhai Prajapati
               </p>
-
-              <div class="mt-2.5 flex flex-wrap items-center justify-center gap-2 text-xs font-bold text-burgundy">
-                <a href="tel:+919909058584"
-                  class="inline-flex items-center gap-1.5 hover:underline bg-warmWhite px-3 py-1 rounded-full border border-champagne transition transform hover:scale-105 shadow-sm">
-                  <i data-lucide="phone" class="w-3 h-3 text-gold-antique"></i> 99090 58584
-                </a>
-                <span class="text-champagne-dark">•</span>
-                <a href="tel:+919104317077"
-                  class="inline-flex items-center gap-1.5 hover:underline bg-warmWhite px-3 py-1 rounded-full border border-champagne transition transform hover:scale-105 shadow-sm">
-                  <i data-lucide="phone" class="w-3 h-3 text-gold-antique"></i> 91043 17077
-                </a>
-              </div>
             </div>
 
-            <!-- Right Circular Monogram Seal (K/K) - Shown on desktop flanking family -->
-            <div class="hidden md:flex w-20 h-20 sm:w-22 sm:h-22 relative items-center justify-center text-burgundy"
-              title="Kashyap & Kajal Monogram">
-              <svg class="w-full h-full text-gold-antique spin-slow" viewBox="0 0 100 100" fill="none"
-                stroke="currentColor">
-                <circle cx="50" cy="50" r="46" stroke-width="1.2" stroke-dasharray="3 3" />
-                <circle cx="50" cy="50" r="41" stroke-width="1.5" />
-                <circle cx="50" cy="50" r="32" stroke-width="1" />
-                <path d="M50 5 Q54 14 50 18 Q46 14 50 5Z" fill="currentColor" />
-                <path d="M50 95 Q54 86 50 82 Q46 86 50 95Z" fill="currentColor" />
-                <path d="M5 50 Q14 54 18 50 Q14 46 5 50Z" fill="currentColor" />
-                <path d="M95 50 Q86 54 82 50 Q86 46 95 50Z" fill="currentColor" />
-                <path d="M18 18 Q26 24 24 28 Q20 26 18 18Z" fill="currentColor" />
-                <path d="M82 18 Q74 24 76 28 Q80 26 82 18Z" fill="currentColor" />
-                <path d="M18 82 Q26 76 24 72 Q20 74 18 82Z" fill="currentColor" />
-                <path d="M82 82 Q74 76 76 72 Q80 74 82 82Z" fill="currentColor" />
-              </svg>
-              <div
-                class="absolute inset-0 flex items-center justify-center font-cinzel text-lg sm:text-xl font-bold tracking-widest text-burgundy">
-                <span>K</span><span class="text-xs font-light mx-0.5 text-gold-antique">/</span><span>K</span>
+            <!-- Sacred Floral Wedding Emblem (Weds) -->
+            <div class="my-3 flex items-center justify-center gap-3">
+              <span class="w-12 sm:w-20 h-px bg-gradient-to-r from-transparent to-gold"></span>
+              <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-warmWhite border border-gold-antique/60 shadow-xs">
+                <span class="text-rose-deep text-sm">&hearts;</span>
+                <span class="font-script text-xl sm:text-2xl text-burgundy font-bold">Weds</span>
+                <span class="text-rose-deep text-sm">&hearts;</span>
               </div>
+              <span class="w-12 sm:w-20 h-px bg-gradient-to-l from-transparent to-gold"></span>
+            </div>
+
+            <!-- Groom Name -->
+            <div class="flex flex-col items-center">
+              <span class="text-xs uppercase tracking-[0.25em] font-cinzel text-gold-dark font-bold mb-1">
+                Chi. (Groom)
+              </span>
+              <h2 class="font-serif font-extrabold text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-burgundy tracking-tight">
+                Dr. Kashyap
+              </h2>
+              <p class="text-xs sm:text-sm font-medium text-charcoal-muted mt-1 max-w-md">
+                Son of A.Sau. Sangeetaben & Dr. Rakeshbhai Hargovanbhai Prajapati<br>
+                <span class="text-[11px] text-charcoal-muted">(Native: Ganglasar &bull; Presently: Palanpur)</span>
+              </p>
             </div>
 
           </div>
 
-          <!-- 2 Navigation Buttons -->
-          <div class="mt-8 flex flex-wrap justify-center gap-3 w-full">
+          <!-- 5. Wedding Couple Nuptial Illustration (Faithfully representing Gujarati Hasta Melap) -->
+          <div class="my-6 flex flex-col items-center">
+            <!-- Custom SVG Couple Silhouette with Traditional Dupatta & Sherwani -->
+            <svg class="w-32 h-24 sm:w-36 sm:h-28 text-sage" viewBox="0 0 120 80" fill="none" stroke="currentColor">
+              <!-- Groom with traditional pagdi / saafa -->
+              <ellipse cx="44" cy="22" rx="5" ry="6" stroke-width="1.8" />
+              <path d="M39 18 Q44 14 49 18" stroke-width="1.8" />
+              <path d="M43 13 L47 8 L49 14" stroke="#C5A15D" stroke-width="1.5" />
+              <path d="M44 28 L44 58" stroke-width="1.8" />
+              <path d="M41 30 L44 36 L47 30" stroke-width="1.5" />
+              <path d="M40 58 L38 74" stroke-width="1.8" />
+              <path d="M48 58 L50 74" stroke-width="1.8" />
+              <!-- Groom Hand offering Hasta Melap -->
+              <path d="M44 38 L54 44" stroke-width="1.8" stroke-linecap="round" />
+
+              <!-- Bride with delicate Odhni / Chundadi -->
+              <ellipse cx="76" cy="23" rx="4.5" ry="5.5" stroke-width="1.8" />
+              <path d="M78 19 Q83 22 80 26" stroke-width="1.8" />
+              <path d="M79 21 C85 28 90 48 93 72" stroke="#8F1D32" stroke-dasharray="2 2" stroke-width="1.6" />
+              <path d="M76 28.5 L76 42" stroke-width="1.8" />
+              <path d="M72 42 L66 74 Q77 78 87 74 L80 42 Z" stroke-width="1.8" fill="#FDF1F3" />
+              <!-- Bride Hand holding Groom's Hand in Hastamelap -->
+              <path d="M76 38 L66 44" stroke-width="1.8" stroke-linecap="round" />
+
+              <!-- Sacred Nuptial Agni Kund & Varmala below hands -->
+              <path d="M54 44 C58 41 62 41 66 44" stroke="#DFBF7F" stroke-width="3" stroke-linecap="round" />
+              <circle cx="60" cy="43" r="2.5" fill="#8F1D32" />
+              <!-- Sacred Agni Flame -->
+              <path d="M57 68 Q60 58 60 54 Q63 60 63 68 Z" fill="#DFBF7F" stroke="#9A7731" stroke-width="1" />
+              <path d="M52 70 L68 70 L64 74 L56 74 Z" fill="#4D4240" />
+            </svg>
+            <span class="font-serif italic text-xs text-charcoal-muted mt-1">
+              "Two souls united in eternal love, guided by sacred mantras and ancient vows"
+            </span>
+          </div>
+
+          <!-- 6. Auspicious Confluence Date, Samvat & Venue -->
+          <div class="bg-warmWhite p-5 sm:p-6 rounded-2xl border border-champagne shadow-xs w-full max-w-lg mb-6">
+            <div class="flex items-center justify-center gap-2 text-gold-dark font-cinzel text-xs font-bold uppercase tracking-wider mb-2">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-antique"></i>
+              <span>Sacred Wedding Date & Muhurat</span>
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-antique"></i>
+            </div>
+            <div class="font-serif font-extrabold text-xl sm:text-2xl text-sage-deep">
+              Sunday, 29th November 2026
+            </div>
+            <div class="text-xs sm:text-sm font-semibold text-burgundy mt-1">
+              Vikram Samvat 2083 &bull; Kartak Vad-6
+            </div>
+            <div class="w-16 h-px bg-gold-antique/50 mx-auto my-3"></div>
+            <div class="flex items-center justify-center gap-1.5 text-xs sm:text-sm font-medium text-charcoal-warm">
+              <i data-lucide="map-pin" class="w-4 h-4 text-sage flex-shrink-0"></i>
+              <span>Shree Siddhnath Mahadev Mandir, Mandal Road, Viramgam</span>
+            </div>
+          </div>
+
+          <!-- 7. Action CTA Buttons (Schedule, Maps, Add to Calendar) -->
+          <div class="flex flex-wrap justify-center gap-3 w-full">
             <a href="#events"
-              class="burgundy-gradient text-white font-semibold px-6 py-2.5 rounded-full shadow-md hover:brightness-110 transition flex items-center gap-2 text-xs uppercase tracking-wider">
+              class="sage-gradient hover:brightness-110 text-white font-semibold px-6 py-2.5 rounded-full shadow-md transition flex items-center gap-2 text-xs uppercase tracking-wider">
               <i data-lucide="calendar" class="w-4 h-4 text-gold-light"></i>
               <span>Wedding Schedule</span>
             </a>
             <a href="#venues"
-              class="bg-warmWhite hover:bg-ivory text-burgundy border border-champagne hover:border-gold-antique font-semibold px-6 py-2.5 rounded-full shadow-sm transition flex items-center gap-2 text-xs uppercase tracking-wider">
-              <i data-lucide="map-pin" class="w-4 h-4 text-burgundy"></i>
-              <span>Venues & Maps</span>
+              class="bg-warmWhite hover:bg-ivory text-sage-deep border border-champagne hover:border-sage font-semibold px-6 py-2.5 rounded-full shadow-sm transition flex items-center gap-2 text-xs uppercase tracking-wider">
+              <i data-lucide="map-pin" class="w-4 h-4 text-sage"></i>
+              <span>Venue & Directions</span>
             </a>
+            <button id="addToCalendarBtn"
+              class="bg-warmWhite hover:bg-ivory text-burgundy border border-champagne hover:border-burgundy font-semibold px-5 py-2.5 rounded-full shadow-sm transition flex items-center gap-2 text-xs uppercase tracking-wider cursor-pointer">
+              <i data-lucide="calendar-plus" class="w-4 h-4 text-burgundy"></i>
+              <span>Add to Calendar</span>
+            </button>
           </div>
 
         </div>
       </section>
 
       <!-- =================================================================
-           SECTION 6: COUNTDOWN SECTION – "The Countdown to Forever"
-           Target: 29 November 2026, 6:00 PM IST (Hast Melap ceremony)
+           SECTION 2: COUNTDOWN SECTION – "The Countdown to Forever"
+           Target: 29 November 2026, 7:00 PM IST (Hast Melap Ceremony)
            ================================================================= -->
       <section
         class="reveal bg-warmWhite rounded-3xl border border-champagne p-6 sm:p-10 royal-card-shadow text-center relative overflow-hidden">
@@ -1096,11 +832,11 @@
           <span class="w-10 h-px bg-gold-antique/50"></span>
         </div>
 
-        <h2 class="font-serif text-2xl sm:text-3xl text-burgundy font-bold">
-          The Countdown to Forever
+        <h2 class="font-serif text-2xl sm:text-3xl text-sage-deep font-bold">
+          The Countdown to Sacred Union
         </h2>
         <p class="font-serif italic text-charcoal-muted text-sm sm:text-base mt-1 mb-6">
-          Every moment brings us closer to the celebration.
+          Every moment brings us closer to the divine Hasta Melap of Kajal & Dr. Kashyap.
         </p>
 
         <!-- Large Serif Numerals Grid -->
@@ -1109,26 +845,26 @@
           <!-- Days -->
           <div
             class="bg-ivory border border-champagne p-3.5 sm:p-5 rounded-2xl text-center shadow-xs transition duration-200 hover:scale-105 hover:border-gold-antique">
-            <span id="days" class="block font-serif text-2xl sm:text-4xl md:text-5xl font-bold text-burgundy">--</span>
+            <span id="days" class="block font-serif text-2xl sm:text-4xl md:text-5xl font-bold text-sage-deep">--</span>
             <span
-              class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-antique font-bold mt-1 block">Days</span>
+              class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-dark font-bold mt-1 block">Days</span>
           </div>
 
           <!-- Hours -->
           <div
             class="bg-ivory border border-champagne p-3.5 sm:p-5 rounded-2xl text-center shadow-xs transition duration-200 hover:scale-105 hover:border-gold-antique">
-            <span id="hours" class="block font-serif text-2xl sm:text-4xl md:text-5xl font-bold text-burgundy">--</span>
+            <span id="hours" class="block font-serif text-2xl sm:text-4xl md:text-5xl font-bold text-sage-deep">--</span>
             <span
-              class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-antique font-bold mt-1 block">Hours</span>
+              class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-dark font-bold mt-1 block">Hours</span>
           </div>
 
           <!-- Minutes -->
           <div
             class="bg-ivory border border-champagne p-3.5 sm:p-5 rounded-2xl text-center shadow-xs transition duration-200 hover:scale-105 hover:border-gold-antique">
             <span id="minutes"
-              class="block font-serif text-2xl sm:text-4xl md:text-5xl font-bold text-burgundy">--</span>
+              class="block font-serif text-2xl sm:text-4xl md:text-5xl font-bold text-sage-deep">--</span>
             <span
-              class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-antique font-bold mt-1 block">Minutes</span>
+              class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-dark font-bold mt-1 block">Mins</span>
           </div>
 
           <!-- Seconds -->
@@ -1137,7 +873,7 @@
             <span id="seconds"
               class="block font-serif text-2xl sm:text-4xl md:text-5xl font-bold text-burgundy">--</span>
             <span
-              class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-antique font-bold mt-1 block">Seconds</span>
+              class="text-[10px] sm:text-xs uppercase tracking-widest text-burgundy font-bold mt-1 block">Secs</span>
           </div>
 
         </div>
@@ -1145,425 +881,812 @@
         <p id="countdownMessage"
           class="text-xs sm:text-sm text-charcoal-muted mt-5 font-medium flex items-center justify-center gap-1.5">
           <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i>
-          <span>Sunday, 29th November 2026 • 6:00 PM IST (Hast Melap, Viramgam)</span>
+          <span>Awaiting the auspicious Godhuli Muhurat &bull; 29th November 2026, 7:00 PM</span>
         </p>
 
       </section>
 
       <!-- =================================================================
-           SECTION 8: WEDDING CEREMONIES AND ITINERARY
-           All 6 ceremonies preserved with custom cultural icons, champagne borders,
-           and special visual emphasis for the main Hast Melap ceremony!
+           SECTION 3: AUSPICIOUS CEREMONIES & ITINERARY (MANGLIK PRASANGO)
+           All 9 ceremonies from Kajal's card arranged across 3 festive days
+           with interactive day filter, high-emphasis Hast Melap, and Vidaay!
            ================================================================= -->
-      <section id="events"
-        class="reveal bg-warmWhite rounded-3xl border border-champagne p-6 sm:p-10 royal-card-shadow relative overflow-hidden">
+      <section id="events" class="space-y-6">
 
-        <!-- Header with Rose Icon -->
-        <div class="text-center mb-10">
-          <div class="flex items-center justify-center gap-2">
-            <span class="font-serif text-xl sm:text-2xl font-bold text-burgundy">|| Auspicious</span>
-
-            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-burgundy" viewBox="0 0 40 40" fill="none" stroke="currentColor"
-              stroke-width="1.8">
-              <path d="M20 18 C17 12 23 8 20 5 C17 8 13 12 20 18 Z" fill="#F4D5D8" opacity="0.6" />
-              <path d="M15 13 C10 16 11 22 17 24 C23 26 27 21 26 16 C25 11 19 10 15 13 Z" />
-              <path d="M18 16 C16 18 18 20 20 20 C22 20 23 18 21 16" />
-              <path d="M20 25 L20 37" stroke-width="2" stroke="#7A9368" />
-              <path d="M20 29 Q14 27 12 30 Q17 33 20 31" fill="#7A9368" opacity="0.8" />
-              <path d="M20 32 Q26 30 28 33 Q23 36 20 34" fill="#7A9368" opacity="0.8" />
-            </svg>
-
-            <span class="font-serif text-xl sm:text-2xl font-bold text-burgundy">Ceremonies ||</span>
+        <div class="text-center">
+          <div class="flex items-center justify-center gap-2 mb-1">
+            <span class="text-gold-antique font-cinzel text-xs uppercase tracking-[0.25em] font-bold">
+              || માંગલિક પ્રસંગો ||
+            </span>
           </div>
-
-          <h2 class="font-serif text-2xl sm:text-3xl text-burgundy font-bold mt-1">
+          <h2 class="font-serif text-2xl sm:text-3xl text-sage-deep font-bold mt-1">
             Auspicious Ceremonies & Itinerary
           </h2>
-          <div class="w-16 h-0.5 bg-gold-antique/60 mx-auto mt-2"></div>
           <p class="text-xs sm:text-sm text-charcoal-muted mt-2 max-w-lg mx-auto">
-            All details and auspicious timings for the joyous wedding celebrations of Dr. Kashyap & Kajal.
+            All sacred rituals, auspicious muhurats, and joyous festivities from the Bride's Family (Viramgam).
           </p>
+
+          <!-- Interactive Day Tabs Filter -->
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-2 max-w-lg mx-auto p-1 bg-warmWhite rounded-full border border-champagne shadow-xs">
+            <button class="filter-tab-btn active px-4 py-1.5 rounded-full text-xs font-semibold transition cursor-pointer bg-sage text-white shadow-xs" data-filter="all">
+              All Events (9)
+            </button>
+            <button class="filter-tab-btn px-4 py-1.5 rounded-full text-xs font-semibold text-charcoal-warm hover:text-sage transition cursor-pointer" data-filter="day1">
+              Day 1: Fri 27 Nov
+            </button>
+            <button class="filter-tab-btn px-4 py-1.5 rounded-full text-xs font-semibold text-charcoal-warm hover:text-sage transition cursor-pointer" data-filter="day2">
+              Day 2: Sat 28 Nov
+            </button>
+            <button class="filter-tab-btn px-4 py-1.5 rounded-full text-xs font-semibold text-charcoal-warm hover:text-sage transition cursor-pointer" data-filter="day3">
+              Day 3: Sun 29 Nov
+            </button>
+          </div>
         </div>
 
-        <!-- 6 Auspicious Events Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Ceremonies Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 pt-2">
 
-          <!-- 1. Ganesh Sthapana & Lagna Vadhavanu Muhurat -->
+          <!-- 1. Lagna Lakhvanu Muhurat (Day 1) -->
           <article
-            class="reveal delay-75 royal-card-hover bg-ivory rounded-2xl p-6 border border-champagne flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span
-                  class="px-3 py-1 bg-warmWhite text-burgundy border border-champagne text-[11px] font-bold rounded-full uppercase tracking-wider">
-                  Day 1 • Auspicious Muhurat
-                </span>
-                <span class="text-xs text-burgundy font-semibold flex items-center gap-1">
-                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 4:30 PM - 6:00 PM
-                </span>
-              </div>
-              <h3 class="font-serif text-lg sm:text-xl font-bold text-burgundy">
-                Ganesh Sthapana & Lagna Vadhavanu
-              </h3>
-              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
-                Auspicious Ganesha Invocation & Lagna Vadhavanu Muhurat
-              </p>
-              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
-                Invoking Lord Ganesha and Shri Brahmani Mataji for blessings, prosperity, and the sanctification of
-                wedding rituals.
-              </p>
-            </div>
-            <div
-              class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
-              <span class="font-semibold text-burgundy">Friday, 27 Nov 2026 (Kartak Vad-3)</span>
-              <span class="text-charcoal-warm">Palanpur</span>
-            </div>
-          </article>
-
-          <!-- 2. Dandiya Raas (Garba & Sangeet) -->
-          <article
-            class="reveal delay-150 royal-card-hover bg-ivory rounded-2xl p-6 border border-champagne flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span
-                  class="px-3 py-1 burgundy-gradient text-white text-[11px] font-bold rounded-full uppercase tracking-wider">
-                  Music & Garba Night
-                </span>
-                <span class="text-xs text-burgundy font-semibold flex items-center gap-1">
-                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 9:00 PM Onwards
-                </span>
-              </div>
-              <h3 class="font-serif text-lg sm:text-xl font-bold text-burgundy">
-                Dandiya Raas (Garba & Sangeet)
-              </h3>
-              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
-                Traditional Gujarati Dandiya Raas & Festive Sangeet
-              </p>
-              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
-                A joyous night of traditional Gujarati Dandiya Raas, rhythmic beats, dhol, and vibrant family
-                celebrations under the open sky.
-              </p>
-            </div>
-            <div
-              class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
-              <span class="font-semibold text-burgundy">Friday, 27 Nov 2026 (Kartak Vad-3)</span>
-              <span class="text-charcoal-warm">Palanpur</span>
-            </div>
-          </article>
-
-          <!-- 3. Jaan Prasthan (Groom's Baraat) -->
-          <article
-            class="reveal delay-225 royal-card-hover bg-ivory rounded-2xl p-6 border border-champagne flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span
-                  class="px-3 py-1 bg-warmWhite text-burgundy border border-champagne text-[11px] font-bold rounded-full uppercase tracking-wider">
-                  Baraat Procession
-                </span>
-                <span class="text-xs text-burgundy font-semibold flex items-center gap-1">
-                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 10:00 AM Sharp
-                </span>
-              </div>
-              <h3 class="font-serif text-lg sm:text-xl font-bold text-burgundy">
-                Jaan Prasthan (Groom's Baraat)
-              </h3>
-              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
-                Groom's Baraat Procession from Palanpur to Viramgam
-              </p>
-              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
-                The joyous wedding party of Dr. Kashyap departs in celebration from Palanpur to the bride's wedding
-                destination in Viramgam.
-              </p>
-            </div>
-            <div
-              class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
-              <span class="font-semibold text-burgundy">Sunday, 29 Nov 2026</span>
-              <span class="text-charcoal-warm font-medium">Palanpur → Viramgam</span>
-            </div>
-          </article>
-
-          <!-- 4. Hast Melap (Main Wedding Rituals - HIGH-EMPHASIS CARD) -->
-          <article
-            class="reveal delay-300 ceremony-featured bg-gradient-to-br from-warmWhite to-rose-blush/60 rounded-2xl p-6 md:p-7 flex flex-col justify-between relative transform md:scale-[1.02]">
+            class="ceremony-card reveal bg-warmWhite rounded-2xl p-6 border border-champagne flex flex-col justify-between shadow-sm transition hover:shadow-md hover:border-gold" data-day="day1">
             <div>
               <div class="flex items-center justify-between mb-2.5">
-                <span
-                  class="px-3 py-1 burgundy-gradient text-white text-[11px] font-bold rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
-                  <i data-lucide="crown" class="w-3.5 h-3.5 text-gold-light"></i>
-                  <span>Main Wedding Ceremony</span>
+                <span class="px-3 py-1 bg-sage-soft text-sage-deep text-[11px] font-bold rounded-full uppercase tracking-wider">
+                  Sacred Inscription
+                </span>
+                <span class="text-xs text-sage font-bold flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 9:00 AM
+                </span>
+              </div>
+              <h3 class="font-serif text-lg sm:text-xl font-bold text-sage-deep">
+                Lagna Lakhvanu Muhurat
+              </h3>
+              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
+                લગ્ન લખવાનું મુહૂર્ત &bull; Formal Penning of Wedding Card
+              </p>
+              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
+                The traditional sanctification and auspicious formal inscription of the marriage invitation card with sacred vermilion (kanku) and blessings of elders.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
+              <span class="font-semibold text-sage-deep">Friday, 27 Nov 2026 (Kartak Vad-4)</span>
+              <span class="text-charcoal-warm">Viramgam</span>
+            </div>
+          </article>
+
+          <!-- 2. Ganesh Sthapana (Day 1) -->
+          <article
+            class="ceremony-card reveal delay-75 bg-warmWhite rounded-2xl p-6 border border-champagne flex flex-col justify-between shadow-sm transition hover:shadow-md hover:border-gold" data-day="day1">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="px-3 py-1 bg-gold-pale text-gold-dark text-[11px] font-bold rounded-full uppercase tracking-wider">
+                  Lord Ganesha Puja
+                </span>
+                <span class="text-xs text-sage font-bold flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 10:00 AM
+                </span>
+              </div>
+              <h3 class="font-serif text-lg sm:text-xl font-bold text-sage-deep">
+                Ganesh Sthapana
+              </h3>
+              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
+                ગણેશ સ્થાપના &bull; Divine Invocation of Vighnaharta
+              </p>
+              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
+                Consecration and invocation of Lord Ganesha and Kuldevi Shree Ambaji Mataji to eliminate all obstacles and shower holy grace on the celebrations.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
+              <span class="font-semibold text-sage-deep">Friday, 27 Nov 2026 (Kartak Vad-4)</span>
+              <span class="text-charcoal-warm">Viramgam</span>
+            </div>
+          </article>
+
+          <!-- 3. Sangeet Sandhya (Day 1) -->
+          <article
+            class="ceremony-card reveal delay-150 bg-warmWhite rounded-2xl p-6 border border-champagne flex flex-col justify-between shadow-sm transition hover:shadow-md hover:border-gold" data-day="day1">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="px-3 py-1 sage-gradient text-white text-[11px] font-bold rounded-full uppercase tracking-wider">
+                  Musical Evening
+                </span>
+                <span class="text-xs text-sage font-bold flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 9:00 PM
+                </span>
+              </div>
+              <h3 class="font-serif text-lg sm:text-xl font-bold text-sage-deep">
+                Sangeet Sandhya
+              </h3>
+              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
+                સંગીત સંધ્યા &bull; Celebration of Melodies & Songs
+              </p>
+              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
+                An enchanting musical evening filled with celebratory songs, Gujarati folk geet, joyful family laughter, and spirited dancing.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
+              <span class="font-semibold text-sage-deep">Friday, 27 Nov 2026 (Kartak Vad-4)</span>
+              <span class="text-charcoal-warm">Viramgam</span>
+            </div>
+          </article>
+
+          <!-- 4. Mandap Muhurat (Day 2) -->
+          <article
+            class="ceremony-card reveal delay-200 bg-warmWhite rounded-2xl p-6 border border-champagne flex flex-col justify-between shadow-sm transition hover:shadow-md hover:border-gold" data-day="day2">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="px-3 py-1 bg-sage-soft text-sage-deep text-[11px] font-bold rounded-full uppercase tracking-wider">
+                  Sacred Mandap Consecration
+                </span>
+                <span class="text-xs text-sage font-bold flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 9:00 AM
+                </span>
+              </div>
+              <h3 class="font-serif text-lg sm:text-xl font-bold text-sage-deep">
+                Mandap Muhurat & Pithi
+              </h3>
+              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
+                મંડપ મુહૂર્ત &bull; Sanctification of the Wedding Pavilion
+              </p>
+              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
+                Erecting the auspicious wedding pavilion pillars with Vedic chanting, maternal blessings, and the auspicious application of fragrant golden pithi (turmeric).
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
+              <span class="font-semibold text-sage-deep">Saturday, 28 Nov 2026 (Kartak Vad-5)</span>
+              <span class="text-charcoal-warm">Viramgam</span>
+            </div>
+          </article>
+
+          <!-- 5. Raas Garba (Day 2) -->
+          <article
+            class="ceremony-card reveal delay-250 bg-warmWhite rounded-2xl p-6 border border-champagne flex flex-col justify-between shadow-sm transition hover:shadow-md hover:border-gold" data-day="day2">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="px-3 py-1 burgundy-gradient text-white text-[11px] font-bold rounded-full uppercase tracking-wider">
+                  Traditional Garba Night
                 </span>
                 <span class="text-xs text-burgundy font-bold flex items-center gap-1">
-                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 6:00 PM - 9:00 PM
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 9:00 PM
+                </span>
+              </div>
+              <h3 class="font-serif text-lg sm:text-xl font-bold text-sage-deep">
+                Raas Garba & Dandiya
+              </h3>
+              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
+                રાસગરબા &bull; Rhythmic Dandiya under the Moonlight
+              </p>
+              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
+                A grand festive night of energetic circular Raas, rhythmic wooden Dandiya beats, dhol grooves, and colorful traditional Gujarati chaniya cholis.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
+              <span class="font-semibold text-sage-deep">Saturday, 28 Nov 2026 (Kartak Vad-5)</span>
+              <span class="text-charcoal-warm">Viramgam</span>
+            </div>
+          </article>
+
+          <!-- 6. Jaan Aagaman (Day 3) -->
+          <article
+            class="ceremony-card reveal delay-300 bg-warmWhite rounded-2xl p-6 border border-champagne flex flex-col justify-between shadow-sm transition hover:shadow-md hover:border-gold" data-day="day3">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="px-3 py-1 bg-gold-pale text-gold-dark text-[11px] font-bold rounded-full uppercase tracking-wider">
+                  Welcoming the Baraat
+                </span>
+                <span class="text-xs text-sage font-bold flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 3:30 PM
+                </span>
+              </div>
+              <h3 class="font-serif text-lg sm:text-xl font-bold text-sage-deep">
+                Jaan Aagaman (Baraat Arrival)
+              </h3>
+              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
+                જાન આગમન &bull; Grand Reception of Groom Dr. Kashyap
+              </p>
+              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
+                Warm royal welcome of Dr. Kashyap and the Groom's wedding party arriving from Palanpur to Viramgam with traditional Pokhana rituals and dhol.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
+              <span class="font-semibold text-sage-deep">Sunday, 29 Nov 2026 (Kartak Vad-6)</span>
+              <span class="text-charcoal-warm">Siddhnath Mandir</span>
+            </div>
+          </article>
+
+          <!-- 7. Bhojan Samarambh (Day 3) -->
+          <article
+            class="ceremony-card reveal delay-350 bg-warmWhite rounded-2xl p-6 border border-champagne flex flex-col justify-between shadow-sm transition hover:shadow-md hover:border-gold" data-day="day3">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="px-3 py-1 bg-sage-soft text-sage-deep text-[11px] font-bold rounded-full uppercase tracking-wider">
+                  Royal Wedding Banquet
+                </span>
+                <span class="text-xs text-sage font-bold flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 6:00 PM Onwards
+                </span>
+              </div>
+              <h3 class="font-serif text-lg sm:text-xl font-bold text-sage-deep">
+                Bhojan Samarambh (Dinner Feast)
+              </h3>
+              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
+                ભોજન સમારંભ &bull; Sumptuous Gujarati Feast
+              </p>
+              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
+                A grand festive dining celebration with authentic Gujarati delicacies, sweets, and culinary hospitality prepared with profound love for all our esteemed guests.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
+              <span class="font-semibold text-sage-deep">Sunday, 29 Nov 2026 (Kartak Vad-6)</span>
+              <span class="text-charcoal-warm">6:00 PM until your arrival</span>
+            </div>
+          </article>
+
+          <!-- 8. Hasta Melap (Main Wedding Rituals - HIGH EMPHASIS FEATURE CARD) -->
+          <article
+            class="ceremony-card reveal delay-400 featured-ceremony-glow bg-gradient-to-br from-warmWhite via-rose-blush/40 to-sage-tint rounded-2xl p-6 sm:p-7 flex flex-col justify-between relative transform md:scale-[1.02] shadow-xl md:col-span-2" data-day="day3">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3.5 py-1.5 sage-gradient text-white text-xs font-bold rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+                  <i data-lucide="crown" class="w-3.5 h-3.5 text-gold-light"></i>
+                  <span>Main Wedding Ceremony (મંગલ ફેરા)</span>
+                </span>
+                <span class="text-xs sm:text-sm text-burgundy font-extrabold flex items-center gap-1 bg-warmWhite px-3 py-1 rounded-full border border-rose-soft">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 7:00 PM Sharp
+                </span>
+              </div>
+
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-sage-deep">
+                Hasta Melap (Sacred Nuptials & Seven Holy Pheras)
+              </h3>
+              <p class="font-serif italic text-xs sm:text-sm text-burgundy font-semibold mb-3">
+                હસ્ત મેળાપ &bull; The Sacred Union of Kajal & Dr. Kashyap &bull; Samvat 2083, Kartak Vad-6
+              </p>
+              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed max-w-2xl">
+                The divine moment of Hastamelap, Kanyadaan, and the circumambulation of the sacred Vedic Agni Kund. Kajal and Dr. Kashyap take the holy seven steps (Saptapadi), promising each other eternal companionship, trust, and dharma.
+              </p>
+            </div>
+
+            <div class="pt-5 mt-5 border-t border-champagne flex flex-wrap items-center justify-between gap-3 text-xs">
+              <span class="font-bold text-sage-deep flex items-center gap-1.5">
+                <i data-lucide="calendar" class="w-3.5 h-3.5 text-gold-antique"></i>
+                <span>Sunday, 29th November 2026 &bull; 7:00 PM</span>
+              </span>
+              <a href="#venues" class="text-burgundy font-bold underline hover:text-burgundy-deep flex items-center gap-1">
+                <span>Shree Siddhnath Mahadev Mandir, Viramgam</span>
+                <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 9. Kanya Vidaay (Day 3 - Emotional Farewell) -->
+          <article
+            class="ceremony-card reveal delay-450 bg-gradient-to-br from-warmWhite to-rose-blush/50 rounded-2xl p-6 border border-rose-soft flex flex-col justify-between shadow-sm md:col-span-2" data-day="day3">
+            <div>
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="px-3 py-1 bg-burgundy/10 text-burgundy text-[11px] font-bold rounded-full uppercase tracking-wider flex items-center gap-1">
+                  <i data-lucide="heart" class="w-3 h-3 text-burgundy"></i>
+                  <span>Bridal Farewell Ritual</span>
+                </span>
+                <span class="text-xs text-burgundy font-bold flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 9:00 PM - 10:00 PM
                 </span>
               </div>
               <h3 class="font-serif text-xl sm:text-2xl font-bold text-burgundy">
-                Hast Melap (Sacred Vows & Pheras)
-              </h3>
-              <p class="font-serif italic text-xs text-burgundy-deep font-medium mb-2">
-                Sacred Wedding Vows & Seven Holy Pheras • Samvat 2083, Kartak Vad-6
-              </p>
-              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
-                The divine union of Dr. Kashyap & Kajal around the sacred agni kund with Vedic hymns, seven holy pheras,
-                and lifelong promises of love and devotion.
-              </p>
-            </div>
-            <div
-              class="pt-4 mt-4 border-t border-champagne/80 flex flex-wrap items-center justify-between gap-2 text-xs">
-              <span class="font-bold text-burgundy">Sunday, 29 Nov 2026 (Kartak Vad-6)</span>
-              <a href="#venue-viramgam"
-                class="text-burgundy font-bold underline hover:text-burgundy-deep flex items-center gap-1">
-                <span>Siddhnath Mandir, Viramgam</span>
-                <i data-lucide="arrow-right" class="w-3 h-3"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- 5. Rudo Mameru (Mosalu Welcome) -->
-          <article
-            class="reveal delay-375 royal-card-hover bg-ivory rounded-2xl p-6 border border-champagne flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span
-                  class="px-3 py-1 bg-warmWhite text-burgundy border border-champagne text-[11px] font-bold rounded-full uppercase tracking-wider">
-                  Maternal Family Blessing
-                </span>
-                <span class="text-xs text-burgundy font-semibold flex items-center gap-1">
-                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 2:00 PM
-                </span>
-              </div>
-              <h3 class="font-serif text-lg sm:text-xl font-bold text-burgundy">
-                Rudo Mameru (Mosalu Welcome)
+                Kanya Vidaay (Bridal Bidding Farewell)
               </h3>
               <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
-                Maternal Family Welcome & Traditional Mosalu Blessings
+                કન્યા વિદાય &bull; Bidding Farewell to our Cherished Daughter
               </p>
               <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
-                Presented with warmth and tradition by maternal uncles (Methan Residents) - sons of Shri Mafatlal
-                Bhikhabhai Prajapati:
-                <strong>Shri Hareshbhai, Shri Rajubhai, Shri Jitubhai, and Late Shaileshbhai Prajapati</strong>.
+                The most emotional and sacred chapter of the wedding day, where our darling daughter Kajal bids farewell to her maternal home to embark on a beautiful lifelong voyage with Dr. Kashyap, showered in endless tears of joy, blessings, and prayers.
               </p>
             </div>
-            <div
-              class="pt-4 mt-4 border-t border-champagne flex items-center justify-between text-xs text-charcoal-muted">
-              <span class="font-semibold text-burgundy">Tuesday, 1 Dec 2026</span>
-              <span class="text-charcoal-warm">Palanpur</span>
-            </div>
-          </article>
-
-          <!-- 6. Svaruchi Bhojan / Grand Reception -->
-          <article
-            class="reveal delay-450 royal-card-hover bg-ivory rounded-2xl p-6 border border-champagne flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-2">
-                <span
-                  class="px-3 py-1 burgundy-gradient text-white text-[11px] font-bold rounded-full uppercase tracking-wider flex items-center gap-1.5 shadow-xs">
-                  <!-- Plate & Cutlery Icon (from Card 2) -->
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M12 9 C11 7 9 7 9 9 C9 11 12 14 12 14 C12 14 15 11 15 9 C15 7 13 7 12 9 Z"
-                      fill="currentColor" />
-                  </svg>
-                  Grand Reception Banquet
-                </span>
-                <span class="text-xs text-burgundy font-semibold flex items-center gap-1">
-                  <i data-lucide="clock" class="w-3.5 h-3.5 text-gold-antique"></i> 6:30 PM Onwards
-                </span>
-              </div>
-              <h3 class="font-serif text-lg sm:text-xl font-bold text-burgundy">
-                Svaruchi Bhojan (Wedding Banquet)
-              </h3>
-              <p class="font-serif italic text-xs text-charcoal-muted font-medium mb-2">
-                Grand Reception Banquet (6:30 PM until your gracious arrival)
-              </p>
-              <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
-                A grand festive dinner reception hosted by the Prajapati family to welcome the newlyweds and celebrate
-                with all relatives and esteemed guests.
-              </p>
-            </div>
-            <div class="pt-4 mt-4 border-t border-champagne flex flex-wrap items-center justify-between gap-2 text-xs">
-              <span class="font-bold text-burgundy">Tuesday, 1 Dec 2026</span>
-              <a href="#venue-vivah"
-                class="text-burgundy font-bold underline hover:text-burgundy-deep flex items-center gap-1">
-                <span>Vivah Party Plot, Palanpur</span>
-                <i data-lucide="arrow-right" class="w-3 h-3"></i>
-              </a>
+            <div class="pt-4 mt-4 border-t border-rose-soft/60 flex items-center justify-between text-xs text-charcoal-muted">
+              <span class="font-semibold text-burgundy">Sunday, 29 Nov 2026 (Night 9:00 PM - 10:00 PM)</span>
+              <span class="text-charcoal-warm font-medium">Shree Siddhnath Mahadev Mandir</span>
             </div>
           </article>
 
         </div>
 
       </section>
-      <p class="text-xs sm:text-sm text-charcoal-warm leading-relaxed">
-        A grand festive dinner reception hosted by the Prajapati family to welcome the newlyweds and celebrate with all
-        relatives and esteemed guests.
-      </p>
-    </div>
-    <div class="pt-4 mt-4 border-t border-champagne flex flex-wrap items-center justify-between gap-2 text-xs">
-      <span class="font-bold text-burgundy">Tuesday, 1 Dec 2026</span>
-      <a href="#venue-vivah" class="text-burgundy font-bold underline hover:text-burgundy-deep flex items-center gap-1">
-        <span>Vivah Party Plot, Palanpur</span>
-        <i data-lucide="arrow-right" class="w-3 h-3"></i>
-      </a>
-    </div>
-    </article>
 
-    </div>
-
-    </section>
-
-    <!-- =================================================================
-           SECTION 9: VENUES AND MAPS
-           Preserves existing locations, addresses, and Google Maps destination links.
+      <!-- =================================================================
+           SECTION 4: TAHUKO – CHILDREN'S HEARTFELT INVITATION (ટહૂકો)
+           Preserved directly from Kajal's printed card
            ================================================================= -->
-    <section id="venues" class="reveal bg-warmWhite rounded-3xl border border-champagne p-6 sm:p-10 royal-card-shadow">
+      <section
+        class="reveal bg-gradient-to-br from-warmWhite via-sage-tint to-warmWhite rounded-3xl border border-champagne p-6 sm:p-10 royal-card-shadow text-center relative overflow-hidden">
 
-      <div class="text-center mb-8">
-        <span class="text-gold-antique font-cinzel text-xs uppercase tracking-[0.25em] font-bold block mb-1">
-          Locations & Navigation
-        </span>
-        <h2 class="font-serif text-2xl sm:text-3xl text-burgundy font-bold">
-          Auspicious Venues & Locations
+        <!-- Decorative Peacock Feather / Flute Motif -->
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <span class="text-gold-antique font-cinzel text-xs uppercase tracking-[0.25em] font-bold">
+            || ટહૂકો ||
+          </span>
+        </div>
+
+        <h2 class="font-serif text-2xl sm:text-3xl text-sage-deep font-bold mb-3">
+          Little Angels' Loving Invitation
         </h2>
-        <div class="w-16 h-0.5 bg-gold-antique/60 mx-auto mt-2"></div>
-      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Tahuko Quote Box -->
+        <div class="max-w-xl mx-auto bg-warmWhite/90 p-5 sm:p-7 rounded-2xl border border-champagne shadow-xs my-4 relative">
+          <span class="font-script text-3xl sm:text-4xl text-gold-dark block mb-2 leading-none">“</span>
+          <p class="font-serif italic text-sm sm:text-base text-charcoal-warm leading-relaxed mb-3">
+            આમ તો અમે નાના એટલે મોટાને કંઈ કહેવાય નહીં, અમારા ફોઈ/દીદી પરણે છે.<br>
+            એટલે ચુપ રહેવાય નહીં. તો અમારા ફોઈ/દીદી ના લગનમાં જલુલા જલુલ પધારશોજી..
+          </p>
+          <div class="w-16 h-px bg-gold-antique/40 mx-auto my-2"></div>
+          <p class="text-xs sm:text-sm text-charcoal-muted leading-relaxed">
+            "Though we are little ones and cannot formally advice our elders, our beloved Foi & Didi is getting married, so we cannot stay quiet! Please, you must definitely grace our Foi & Didi's wedding celebrations!"
+          </p>
+          <span class="font-script text-3xl sm:text-4xl text-gold-dark block mt-2 text-right leading-none">”</span>
+        </div>
 
-        <!-- 1. Viramgam Wedding Venue (Hast Melap) -->
-        <div id="venue-viramgam"
-          class="reveal delay-75 royal-card-hover bg-ivory rounded-2xl border border-champagne p-6 flex flex-col justify-between">
-          <div>
-            <span
-              class="inline-flex items-center gap-1.5 px-3 py-1 burgundy-gradient text-white text-[11px] font-bold rounded-full uppercase tracking-wider mb-3">
-              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-light"></i>
-              <span>Wedding Venue (Hast Melap Ceremony)</span>
-            </span>
-            <h3 class="font-serif text-xl sm:text-2xl font-bold text-burgundy mb-1">
-              Siddhnath Mahadev Mandir
-            </h3>
-            <p class="text-xs sm:text-sm font-semibold text-charcoal-warm mb-2">
-              Shri Bharatbhai Parsottambhai Prajapati (Bride's Family)
-            </p>
-            <p class="text-xs sm:text-sm text-charcoal-muted leading-relaxed mb-4">
-              Mandal Road, At & Taluka Viramgam, District Ahmedabad, Gujarat.
-            </p>
-            <div
-              class="bg-warmWhite p-3.5 rounded-xl border border-champagne text-xs text-charcoal-warm mb-4 space-y-1.5">
-              <div><strong class="text-burgundy">Ritual:</strong> Hast Melap (Wedding Vows & Pheras)</div>
-              <div><strong class="text-burgundy">Date & Time:</strong> Sunday, 29th November 2026 (6:00 PM)</div>
+        <!-- Kids' Names -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-bold text-sage-deep mt-4">
+          <span class="bg-warmWhite px-3 py-1.5 rounded-full border border-champagne shadow-xs">Shaurya</span>
+          <span class="bg-warmWhite px-3 py-1.5 rounded-full border border-champagne shadow-xs">Jaitra</span>
+          <span class="bg-warmWhite px-3 py-1.5 rounded-full border border-champagne shadow-xs">Divyant</span>
+          <span class="bg-warmWhite px-3 py-1.5 rounded-full border border-champagne shadow-xs">Unnati</span>
+          <span class="bg-warmWhite px-3 py-1.5 rounded-full border border-champagne shadow-xs">Saumya</span>
+          <span class="bg-warmWhite px-3 py-1.5 rounded-full border border-champagne shadow-xs">Siya</span>
+        </div>
+
+      </section>
+
+      <!-- =================================================================
+           SECTION 5: AUSPICIOUS BLESSINGS, MAMERA & FAMILY LINEAGE
+           All Aashirwad, Ruda Mamera, Foi Paksh, Darshanabhilashi & Snehdhin
+           faithfully presented in clean, respectful English and Gujarati titles!
+           ================================================================= -->
+      <section class="space-y-6">
+
+        <div class="text-center">
+          <span class="text-gold-antique font-cinzel text-xs uppercase tracking-[0.25em] font-bold block mb-1">
+            Reverence & Gratitude
+          </span>
+          <h2 class="font-serif text-2xl sm:text-3xl text-sage-deep font-bold">
+            Auspicious Blessings & Family Lineage
+          </h2>
+          <div class="w-16 h-0.5 bg-gold-antique/60 mx-auto mt-2"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+          <!-- 1. Aashirwad (Blessings) -->
+          <div class="reveal bg-warmWhite rounded-2xl p-6 border border-champagne shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <i data-lucide="sparkles" class="w-4 h-4 text-gold-antique"></i>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-sage-deep">
+                  Aashirwad (આશીર્વાદ)
+                </h3>
+              </div>
+              <ul class="text-xs sm:text-sm text-charcoal-warm space-y-2">
+                <li class="font-semibold text-sage-dark">&bull; Shrimati Gangaba (શ્રીમતી ગંગાબા)</li>
+                <li class="font-semibold text-sage-dark">&bull; Shri Rajubapa (શ્રી રાજુબાપા)</li>
+                <li class="text-charcoal-muted pt-1">
+                  Bra. Swa. Shri Swarupanandji Satsang Mandal, Virochannagar na Jai Gurudev
+                </li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-3 border-t border-champagne text-[11px] text-gold-dark font-medium">
+              Guiding light & spiritual blessings
             </div>
           </div>
 
-          <a href="https://www.google.com/maps/search/?api=1&query=Siddhnath+Mahadev+Mandir+Mandal+Road+Viramgam"
-            target="_blank" rel="noopener noreferrer"
-            class="w-full inline-flex items-center justify-center gap-2 burgundy-gradient hover:brightness-110 text-white font-semibold py-2.5 px-4 rounded-xl shadow-sm transition text-xs uppercase tracking-wider">
-            <i data-lucide="navigation" class="w-4 h-4 text-gold-light"></i>
-            <span>Get Directions in Google Maps</span>
-          </a>
+          <!-- 2. Ruda Mamera (Mosal Paksh) -->
+          <div class="reveal delay-75 bg-warmWhite rounded-2xl p-6 border border-champagne shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <i data-lucide="gift" class="w-4 h-4 text-burgundy"></i>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-burgundy">
+                  Ruda Mamera (રૂડા મામેરા)
+                </h3>
+              </div>
+              <div class="text-xs sm:text-sm text-charcoal-warm space-y-2">
+                <p class="font-semibold text-burgundy-deep">
+                  Shri Ashokbhai Valjibhai Prajapati
+                </p>
+                <p class="text-charcoal-muted">
+                  Samast Jasalpura Parivar (Javantri)<br>
+                  <span class="text-[11px]">(સમસ્ત જસલપુરા પરિવાર - જાવંત્રી)</span>
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-champagne text-[11px] text-charcoal-muted font-medium">
+              Maternal family affection & gifts
+            </div>
+          </div>
+
+          <!-- 3. Foi Paksh (Paternal Aunt & Uncle) -->
+          <div class="reveal delay-150 bg-warmWhite rounded-2xl p-6 border border-champagne shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <i data-lucide="heart" class="w-4 h-4 text-rose-deep"></i>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-sage-deep">
+                  Foi Paksh (ફોઈપક્ષ)
+                </h3>
+              </div>
+              <div class="text-xs sm:text-sm text-charcoal-warm space-y-1.5">
+                <p class="font-semibold text-sage-deep">
+                  A.Sau. Padmaben Bhikhalal Prajapati
+                </p>
+                <p class="font-semibold text-charcoal-warm">
+                  Shri Bhikhalal Ajmalbhai Prajapati
+                </p>
+                <p class="text-[11px] text-charcoal-muted">
+                  (અ.સૌ. પદ્માબેન તથા શ્રી ભીખાલાલ અજમલભાઈ પ્રજાપતિ)
+                </p>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-champagne text-[11px] text-charcoal-muted font-medium">
+              Paternal aunt & uncle's auspicious wishes
+            </div>
+          </div>
+
         </div>
 
-        <!-- 2. Palanpur Banquet Venue (Svaruchi Bhojan) -->
-        <div id="venue-vivah"
-          class="reveal delay-150 royal-card-hover bg-ivory rounded-2xl border border-champagne p-6 flex flex-col justify-between">
-          <div>
-            <span
-              class="inline-flex items-center gap-1.5 px-3 py-1 burgundy-gradient text-white text-[11px] font-bold rounded-full uppercase tracking-wider mb-3">
-              <i data-lucide="utensils" class="w-3.5 h-3.5 text-gold-light"></i>
-              <span>Reception Venue (Svaruchi Bhojan)</span>
-            </span>
-            <h3 class="font-serif text-xl sm:text-2xl font-bold text-burgundy mb-1">
-              Vivah Party Plot
+        <!-- Darshanabhilashi & Snehdhin Accordions / Full Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-3">
+
+          <!-- Darshanabhilashi (દર્શનાભિલાષી) -->
+          <div class="reveal delay-200 bg-warmWhite rounded-2xl p-6 border border-champagne shadow-xs">
+            <h3 class="font-serif text-base sm:text-lg font-bold text-sage-deep mb-3 pb-2 border-b border-champagne flex items-center justify-between">
+              <span>Darshanabhilashi (દર્શનાભિલાષી)</span>
+              <span class="text-xs font-normal text-charcoal-muted">Well Wishers</span>
             </h3>
-            <p class="text-xs sm:text-sm font-semibold text-charcoal-warm mb-2">
-              Near Brahmani Mata Mandir, Akesan Village
-            </p>
-            <p class="text-xs sm:text-sm text-charcoal-muted leading-relaxed mb-4">
-              Akesan Fatak Road, Palanpur, Banaskantha, Gujarat.
-            </p>
-            <div
-              class="bg-warmWhite p-3.5 rounded-xl border border-champagne text-xs text-charcoal-warm mb-4 space-y-1.5">
-              <div><strong class="text-burgundy">Rituals:</strong> Rudo Mameru & Svaruchi Bhojan (Reception)</div>
-              <div><strong class="text-burgundy">Date & Time:</strong> Tuesday, 1st December 2026 (6:30 PM Onwards)
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-charcoal-warm">
+              <li class="text-charcoal-muted">Late Narmadaben Baldevbhai Prajapati</li>
+              <li class="text-charcoal-muted">Late Godavariben Parsottambhai Prajapati</li>
+              <li>Gan. Swa. Kamuben Sureshbhai Prajapati</li>
+              <li>Gan. Swa. Godavariben Manubhai Prajapati</li>
+              <li>A.Sau. Ramilaben Nanubhai Prajapati</li>
+              <li>A.Sau. Jyotsnaben Bharatbhai Prajapati</li>
+              <li>A.Sau. Varshaben Arvindbhai Prajapati</li>
+              <li>A.Sau. Bhartiben Kaushalbhai Prajapati</li>
+              <li>A.Sau. Chetnaben Bharatbhai Prajapati</li>
+              <li>A.Sau. Hansaben Shaileshbhai Prajapati</li>
+            </ul>
+          </div>
+
+          <!-- Li. Snehdhin (લી. સ્નેહાધીન) -->
+          <div class="reveal delay-250 bg-warmWhite rounded-2xl p-6 border border-champagne shadow-xs">
+            <h3 class="font-serif text-base sm:text-lg font-bold text-sage-deep mb-3 pb-2 border-b border-champagne flex items-center justify-between">
+              <span>Li. Snehdhin (લી. સ્નેહાધીન)</span>
+              <span class="text-xs font-normal text-charcoal-muted">Ever Affectionate</span>
+            </h3>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-charcoal-warm">
+              <li class="text-charcoal-muted">Late Baldevbhai Bababhai Prajapati</li>
+              <li class="text-charcoal-muted">Late Parsottambhai Bababhai Prajapati</li>
+              <li class="text-charcoal-muted">Late Sureshbhai Bababhai Prajapati</li>
+              <li class="text-charcoal-muted">Late Manubhai Bababhai Prajapati</li>
+              <li>Shri Nanubhai Baldevbhai Prajapati</li>
+              <li>Shri Arvindbhai Parsottambhai Prajapati</li>
+              <li>Shri Bharatbhai Sureshbhai Prajapati</li>
+              <li>Shri Shaileshbhai Manubhai Prajapati</li>
+              <li>Shri Kaushalbhai Bharatbhai Prajapati</li>
+              <li>Shri Neel Arvindbhai Prajapati</li>
+              <li>Shri Shaurya Kaushalbhai Prajapati</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- =================================================================
+           SECTION 6: VENUES & NAVIGATION (પ્રસંગોનું શુભસ્થળ)
+           Shree Siddhnath Mahadev Mandir (Mandal Road, Viramgam)
+           and Host Family Residence (Khan no Delo, Viramgam)
+           ================================================================= -->
+      <section id="venues" class="reveal bg-warmWhite rounded-3xl border border-champagne p-6 sm:p-10 royal-card-shadow">
+
+        <div class="text-center mb-8">
+          <span class="text-gold-antique font-cinzel text-xs uppercase tracking-[0.25em] font-bold block mb-1">
+            Locations & Directions
+          </span>
+          <h2 class="font-serif text-2xl sm:text-3xl text-sage-deep font-bold">
+            Auspicious Venues & Host Address
+          </h2>
+          <div class="w-16 h-0.5 bg-gold-antique/60 mx-auto mt-2"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- 1. Main Wedding Venue: Siddhnath Mahadev Mandir -->
+          <div
+            class="reveal delay-75 bg-ivory rounded-2xl border border-champagne p-6 flex flex-col justify-between shadow-xs transition hover:shadow-md hover:border-gold">
+            <div>
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 sage-gradient text-white text-[11px] font-bold rounded-full uppercase tracking-wider mb-3 shadow-xs">
+                <i data-lucide="church" class="w-3.5 h-3.5 text-gold-light"></i>
+                <span>All Wedding Ceremonies Venue</span>
+              </span>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-sage-deep mb-1">
+                Shree Siddhnath Mahadev Mandir
+              </h3>
+              <p class="text-xs sm:text-sm font-semibold text-burgundy mb-2">
+                શ્રી સિદ્ધનાથ મહાદેવ મંદિર &bull; Mandal Road, Viramgam
+              </p>
+              <p class="text-xs sm:text-sm text-charcoal-muted leading-relaxed mb-4">
+                Mandal Road, At & Taluka Viramgam, District Ahmedabad, Gujarat, India.
+              </p>
+
+              <div class="bg-warmWhite p-3.5 rounded-xl border border-champagne text-xs text-charcoal-warm mb-4 space-y-1.5">
+                <div><strong class="text-sage-deep">Key Ceremonies:</strong> Jaan Aagaman, Bhojan, Hasta Melap, Kanya Vidaay</div>
+                <div><strong class="text-sage-deep">Date & Timing:</strong> Sunday, 29th November 2026 (From 3:30 PM Onwards)</div>
+              </div>
+            </div>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Siddhnath+Mahadev+Mandir+Mandal+Road+Viramgam"
+              target="_blank" rel="noopener noreferrer"
+              class="w-full inline-flex items-center justify-center gap-2 sage-gradient hover:brightness-110 text-white font-semibold py-2.5 px-4 rounded-xl shadow-sm transition text-xs uppercase tracking-wider">
+              <i data-lucide="navigation" class="w-4 h-4 text-gold-light"></i>
+              <span>Get Directions in Google Maps</span>
+            </a>
+          </div>
+
+          <!-- 2. Host Residence (Shubh Sthal) -->
+          <div
+            class="reveal delay-150 bg-ivory rounded-2xl border border-champagne p-6 flex flex-col justify-between shadow-xs transition hover:shadow-md hover:border-gold">
+            <div>
+              <span
+                class="inline-flex items-center gap-1.5 px-3 py-1 bg-warmWhite text-sage-deep border border-champagne text-[11px] font-bold rounded-full uppercase tracking-wider mb-3">
+                <i data-lucide="home" class="w-3.5 h-3.5 text-gold-antique"></i>
+                <span>Bride Host Family Residence (શુભ સ્થળ)</span>
+              </span>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-sage-deep mb-1">
+                Shri Bharatbhai Parsottambhai Prajapati
+              </h3>
+              <p class="text-xs sm:text-sm font-semibold text-charcoal-warm mb-2">
+                Khan no Delo, Viramgam, Dist. Ahmedabad
+              </p>
+              <p class="text-xs sm:text-sm text-charcoal-muted leading-relaxed mb-4">
+                ખાનનો ડેલો, વિરમગામ, જી. અમદાવાદ, ગુજરાત.
+              </p>
+
+              <div class="bg-warmWhite p-3.5 rounded-xl border border-champagne text-xs text-charcoal-warm mb-4 space-y-2">
+                <div class="font-medium text-sage-dark">For any assistance or gracious blessings, feel free to contact:</div>
+                <div class="flex flex-wrap items-center gap-3 font-semibold text-sage-deep pt-1">
+                  <a href="tel:+919879285082" class="hover:underline flex items-center gap-1">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-antique"></i>
+                    <span>+91 98792 85082</span>
+                  </a>
+                  <span>&bull;</span>
+                  <a href="tel:+918905150056" class="hover:underline flex items-center gap-1">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-antique"></i>
+                    <span>+91 89051 50056</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <a href="tel:+919879285082"
+                class="flex-1 inline-flex items-center justify-center gap-2 bg-warmWhite hover:bg-ivory text-sage-deep border border-champagne font-semibold py-2.5 px-4 rounded-xl shadow-xs transition text-xs uppercase tracking-wider">
+                <i data-lucide="phone-call" class="w-3.5 h-3.5 text-sage"></i>
+                <span>Call Host</span>
+              </a>
+              <a href="https://wa.me/919879285082?text=Namaste%20Prajapati%20Family,%20congratulations%20on%20Kajal%20and%20Dr.%20Kashyap's%20wedding!"
+                target="_blank" rel="noopener noreferrer"
+                class="flex-1 inline-flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5 px-4 rounded-xl shadow-xs transition text-xs uppercase tracking-wider">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Palanpur Groom Family Connection Information -->
+        <div class="mt-8 bg-ivory/60 border border-champagne rounded-2xl p-5 text-center max-w-xl mx-auto">
+          <h4 class="font-serif font-bold text-sage-deep text-sm mb-1">
+            Groom Family Connection: Ganglasar &bull; Palanpur
+          </h4>
+          <p class="text-xs text-charcoal-muted leading-relaxed">
+            Chi. Dr. Kashyap is the beloved son of A.Sau. Sangeetaben & Dr. Rakeshbhai Hargovanbhai Prajapati (Palanpur).
+          </p>
+        </div>
+
+      </section>
+
+      <!-- =================================================================
+           SECTION 7: ORIGINAL PRINTED KANKOTRI GALLERY (LIGHTBOX MODAL TRIGGER)
+           Allows guests to view the authentic printed Gujarati invitation cards!
+           ================================================================= -->
+      <section class="reveal bg-warmWhite rounded-3xl border border-champagne p-6 sm:p-8 royal-card-shadow text-center">
+        <div class="max-w-xl mx-auto">
+          <span class="text-gold-antique font-cinzel text-xs uppercase tracking-[0.25em] font-bold block mb-1">
+            Traditional Keepsake
+          </span>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-sage-deep mb-2">
+            Original Printed Gujarati Kankotri
+          </h3>
+          <p class="text-xs sm:text-sm text-charcoal-muted mb-6">
+            View the authentic printed wedding cards scanned directly from the original invitation stationery.
+          </p>
+
+          <div class="grid grid-cols-3 gap-3 sm:gap-4 mb-6">
+            <!-- Cover Thumb -->
+            <div class="cursor-pointer group relative rounded-xl overflow-hidden border border-champagne shadow-xs aspect-[3/4] bg-ivory" onclick="openKankotriLightbox(0)">
+              <img src="assets/kajal/kankotri_cover.jpg" alt="Kankotri Card Cover" class="w-full h-full object-cover transition duration-300 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-sage-deep/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">
+                <i data-lucide="zoom-in" class="w-5 h-5"></i>
+              </div>
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-1.5 text-center text-[10px] text-white font-medium">
+                Card Cover
+              </div>
+            </div>
+
+            <!-- Letter Thumb -->
+            <div class="cursor-pointer group relative rounded-xl overflow-hidden border border-champagne shadow-xs aspect-[3/4] bg-ivory" onclick="openKankotriLightbox(1)">
+              <img src="assets/kajal/kankotri_letter.jpg" alt="Kankotri Invitation Letter" class="w-full h-full object-cover transition duration-300 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-sage-deep/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">
+                <i data-lucide="zoom-in" class="w-5 h-5"></i>
+              </div>
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-1.5 text-center text-[10px] text-white font-medium">
+                Lagna Patrika
+              </div>
+            </div>
+
+            <!-- Ceremonies Thumb -->
+            <div class="cursor-pointer group relative rounded-xl overflow-hidden border border-champagne shadow-xs aspect-[3/4] bg-ivory" onclick="openKankotriLightbox(2)">
+              <img src="assets/kajal/kankotri_ceremonies.jpg" alt="Kankotri Ceremonies Page" class="w-full h-full object-cover transition duration-300 group-hover:scale-105" loading="lazy">
+              <div class="absolute inset-0 bg-sage-deep/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold">
+                <i data-lucide="zoom-in" class="w-5 h-5"></i>
+              </div>
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent p-1.5 text-center text-[10px] text-white font-medium">
+                Ceremonies
               </div>
             </div>
           </div>
 
-          <a href="https://www.google.com/maps/search/?api=1&query=Vivah+Party+Plot+Akesan+Road+Palanpur"
-            target="_blank" rel="noopener noreferrer"
-            class="w-full inline-flex items-center justify-center gap-2 burgundy-gradient hover:brightness-110 text-white font-semibold py-2.5 px-4 rounded-xl shadow-sm transition text-xs uppercase tracking-wider">
-            <i data-lucide="navigation" class="w-4 h-4 text-gold-light"></i>
-            <span>Get Directions in Google Maps</span>
-          </a>
+          <button onclick="openKankotriLightbox(0)"
+            class="inline-flex items-center gap-2 bg-ivory hover:bg-warmWhite text-sage-deep border border-champagne hover:border-gold px-5 py-2.5 rounded-full text-xs font-semibold shadow-xs transition cursor-pointer">
+            <i data-lucide="expand" class="w-3.5 h-3.5 text-gold-antique"></i>
+            <span>Expand Full Kankotri Reader</span>
+          </button>
         </div>
-
-      </div>
-
-      <!-- Palanpur Residence Information (Groom's Family Residence Panel from Card) -->
-      <div
-        class="reveal delay-225 royal-card-hover mt-8 bg-ivory border border-champagne rounded-2xl p-6 text-center max-w-xl mx-auto">
-        <div class="flex items-center justify-center gap-2 mb-2">
-          <!-- Dhol & Shehnai Icon from Card 2 -->
-          <svg class="w-6 h-6 text-burgundy" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
-            <ellipse cx="20" cy="20" rx="14" ry="8" transform="rotate(-20 20 20)" />
-            <ellipse cx="9" cy="16" rx="5" ry="8" transform="rotate(-20 9 16)" fill="#DDA8AC" opacity="0.5" />
-            <ellipse cx="31" cy="24" rx="5" ry="8" transform="rotate(-20 31 24)" fill="#DDA8AC" opacity="0.5" />
-            <path d="M12 11 L28 17 M10 21 L26 27" stroke-width="1.2" />
-          </svg>
-          <h4 class="font-serif font-bold text-burgundy text-base">
-            Groom Family Residence (Palanpur)
-          </h4>
-        </div>
-        <p class="font-semibold text-charcoal-warm text-sm">
-          Dr. Rakeshbhai Hargovindbhai Prajapati
-        </p>
-        <p class="text-xs sm:text-sm text-charcoal-muted mt-1 leading-relaxed">
-          2, Pramukh Green Society, Opp. Akshtam-1,<br>
-          Outside Akesan Fatak, Opp. Upasana School, Palanpur
-        </p>
-        <div class="mt-3.5 flex flex-wrap justify-center items-center gap-3 text-xs font-semibold text-burgundy">
-          <a href="tel:+919909058584"
-            class="inline-flex items-center gap-1.5 bg-warmWhite px-3.5 py-1.5 rounded-full border border-champagne hover:border-gold-antique shadow-xs transition">
-            <i data-lucide="phone-call" class="w-3.5 h-3.5 text-gold-antique"></i>
-            <span>+91 99090 58584</span>
-          </a>
-          <a href="tel:+919104317077"
-            class="inline-flex items-center gap-1.5 bg-warmWhite px-3.5 py-1.5 rounded-full border border-champagne hover:border-gold-antique shadow-xs transition">
-            <i data-lucide="phone-call" class="w-3.5 h-3.5 text-gold-antique"></i>
-            <span>+91 91043 17077</span>
-          </a>
-        </div>
-      </div>
-
-    </section>
+      </section>
 
       <!-- =================================================================
-           SECTION 10: FOOTER
+           SECTION 8: SEND WEDDING BLESSINGS (INTERACTIVE AASHIRWAD MODAL TRIGGER)
            ================================================================= -->
-      <footer class="mt-14 text-center text-xs text-charcoal-muted py-8 border-t border-champagne space-y-2">
+      <section class="reveal bg-gradient-to-br from-warmWhite via-rose-blush/30 to-warmWhite rounded-3xl border border-champagne p-6 sm:p-10 royal-card-shadow text-center">
+        <div class="max-w-md mx-auto">
+          <div class="w-12 h-12 rounded-full bg-rose-blush border border-rose-soft mx-auto flex items-center justify-center mb-3">
+            <span class="text-2xl">✨</span>
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-sage-deep mb-2">
+            Send Your Loving Aashirwad
+          </h3>
+          <p class="text-xs sm:text-sm text-charcoal-muted mb-5 leading-relaxed">
+            Shower virtual Kanku-Chokhā (sacred vermilion & rice) and bless Kajal & Dr. Kashyap as they step into married life.
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-2 mb-4">
+            <button class="quick-blessing-btn bg-warmWhite hover:bg-ivory border border-champagne px-3 py-1.5 rounded-full text-xs font-medium text-sage-deep transition cursor-pointer" onclick="sendQuickAashirwad('Sada Saubhagyavati Bhava! Wishing Kajal & Dr. Kashyap lifelong bliss!')">
+              🙏 Sada Saubhagyavati Bhava!
+            </button>
+            <button class="quick-blessing-btn bg-warmWhite hover:bg-ivory border border-champagne px-3 py-1.5 rounded-full text-xs font-medium text-sage-deep transition cursor-pointer" onclick="sendQuickAashirwad('May Maa Ambaji & Lord Shiva shower infinite health & joy!')">
+              🌸 Maa Ambaji’s Grace & Joy
+            </button>
+            <button class="quick-blessing-btn bg-warmWhite hover:bg-ivory border border-champagne px-3 py-1.5 rounded-full text-xs font-medium text-sage-deep transition cursor-pointer" onclick="sendQuickAashirwad('Heartiest Congratulations to the Prajapati Family!')">
+              💐 Heartiest Congratulations!
+            </button>
+          </div>
+
+          <button onclick="openCustomBlessingModal()"
+            class="sage-gradient hover:brightness-110 text-white font-semibold px-6 py-2.5 rounded-full shadow-md text-xs uppercase tracking-wider transition cursor-pointer inline-flex items-center gap-2">
+            <i data-lucide="edit-3" class="w-3.5 h-3.5 text-gold-light"></i>
+            <span>Write Personal Blessing</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           FOOTER
+           ================================================================= -->
+      <footer class="mt-14 text-center text-xs text-charcoal-muted py-8 border-t border-champagne space-y-3">
         <div class="flex items-center justify-center gap-2 text-gold-antique mb-1">
           <span class="w-12 h-px bg-gold-antique/40"></span>
-          <span class="font-cinzel text-xs font-bold tracking-widest text-burgundy">K ♡ K</span>
+          <span class="font-cinzel text-xs font-bold tracking-widest text-sage-deep">K &hearts; K</span>
           <span class="w-12 h-px bg-gold-antique/40"></span>
         </div>
-        <p class="font-serif font-bold text-burgundy text-base">
-          Dr. Kashyap & Kajal • Prajapati Family
+        <p class="font-serif font-bold text-sage-deep text-base">
+          Kajal &bull; Dr. Kashyap &bull; Prajapati Family
         </p>
         <p class="text-charcoal-warm">
-          Samvat 2083, Kartak Vad-6 • 29 November 2026 • Palanpur &bull; Viramgam
+          Vikram Samvat 2083, Kartak Vad-6 &bull; 29 November 2026 &bull; Viramgam, Gujarat
         </p>
-        <div class="pt-2 flex items-center justify-center gap-4 text-burgundy text-xs font-semibold">
+
+        <!-- Navigation Links & Groom Card Switcher -->
+        <div class="pt-2 flex flex-wrap items-center justify-center gap-4 text-sage-deep text-xs font-semibold">
           <a href="#hero-card" class="hover:underline">Cover</a>
-          <span>•</span>
+          <span>&bull;</span>
           <a href="#events" class="hover:underline">Schedule</a>
-          <span>•</span>
+          <span>&bull;</span>
           <a href="#venues" class="hover:underline">Venues</a>
+          <span>&bull;</span>
+          <a href="kashyap_wedding_invitation.html" class="hover:underline text-burgundy font-bold flex items-center gap-1">
+            <span>View Groom's Card (Dr. Kashyap)</span>
+            <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
         </div>
+
         <p class="text-[11px] text-charcoal-muted pt-3">
-          Made with love & reverence for the auspicious wedding celebrations.
+          Made with boundless reverence & love for the wedding celebrations of Kajal & Dr. Kashyap.
         </p>
       </footer>
 
     </div>
   </main>
+
+  <!-- =====================================================================
+       LIGHTBOX MODAL FOR PHYSICAL KANKOTRI PHOTOS
+       ===================================================================== -->
+  <div id="kankotriLightbox" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-3 sm:p-6 transition-all">
+    <button onclick="closeKankotriLightbox()" class="absolute top-4 right-4 text-white hover:text-gold-light p-2 rounded-full bg-black/50 transition cursor-pointer z-10">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+    <div class="max-w-3xl w-full max-h-[90vh] flex flex-col items-center">
+      <div class="relative w-full flex items-center justify-center">
+        <button onclick="prevKankotriSlide()" class="absolute left-2 text-white bg-black/50 hover:bg-black/80 p-2 rounded-full transition cursor-pointer">
+          <i data-lucide="chevron-left" class="w-6 h-6"></i>
+        </button>
+        <img id="lightboxImage" src="assets/kajal/kankotri_cover.jpg" alt="Kankotri Page" class="max-h-[75vh] w-auto max-w-full rounded-xl shadow-2xl object-contain border border-champagne/30">
+        <button onclick="nextKankotriSlide()" class="absolute right-2 text-white bg-black/50 hover:bg-black/80 p-2 rounded-full transition cursor-pointer">
+          <i data-lucide="chevron-right" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div class="mt-3 text-center">
+        <div id="lightboxCaption" class="text-white font-serif text-sm font-semibold">Card Cover</div>
+        <div class="text-white/60 text-xs mt-0.5">Use arrows or click thumbnails to browse pages</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       CUSTOM BLESSING WRITE MODAL
+       ===================================================================== -->
+  <div id="customBlessingModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden items-center justify-center p-4">
+    <div class="bg-warmWhite rounded-3xl max-w-md w-full p-6 border border-champagne shadow-2xl relative">
+      <button onclick="closeCustomBlessingModal()" class="absolute top-4 right-4 text-charcoal-muted hover:text-sage-deep p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center mb-4">
+        <div class="w-10 h-10 rounded-full bg-sage-soft text-sage flex items-center justify-center mx-auto mb-2">
+          <i data-lucide="heart" class="w-5 h-5"></i>
+        </div>
+        <h4 class="font-serif font-bold text-xl text-sage-deep">Write Your Aashirwad</h4>
+        <p class="text-xs text-charcoal-muted">Your loving blessings will be showered virtually upon Kajal & Dr. Kashyap.</p>
+      </div>
+
+      <div class="space-y-3">
+        <div>
+          <label class="block text-xs font-semibold text-charcoal-warm mb-1">Your Name</label>
+          <input type="text" id="guestNameInput" placeholder="e.g. Ramesh & Suman Prajapati"
+            class="w-full px-3.5 py-2 text-xs rounded-xl border border-champagne bg-ivory focus:outline-none focus:border-sage">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-charcoal-warm mb-1">Your Blessings & Warm Wishes</label>
+          <textarea id="guestBlessingInput" rows="3" placeholder="Wishing you both infinite happiness, prosperity, and love on this sacred voyage..."
+            class="w-full px-3.5 py-2 text-xs rounded-xl border border-champagne bg-ivory focus:outline-none focus:border-sage"></textarea>
+        </div>
+        <button onclick="submitCustomBlessing()"
+          class="w-full py-2.5 sage-gradient text-white rounded-xl font-semibold text-xs uppercase tracking-wider shadow-md hover:brightness-110 transition cursor-pointer">
+          Shower Blessings Now ✨
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed top-5 right-5 z-50 pointer-events-none space-y-2 max-w-sm w-full"></div>
 
   <!-- =====================================================================
        JAVASCRIPT ARCHITECTURE & INTERACTIVE CONTROLS
@@ -1597,12 +1720,12 @@
       const iconWrapperMobile = document.getElementById('musicIconWrapperMobile');
 
       if (playing) {
-        if (statusText) statusText.innerText = 'Pause Music';
+        if (statusText) statusText.innerText = 'Pause Shehnai';
         if (statusTextMobile) statusTextMobile.innerText = 'Pause';
         if (iconWrapper) iconWrapper.innerHTML = eqBars;
         if (iconWrapperMobile) iconWrapperMobile.innerHTML = eqBars;
       } else {
-        if (statusText) statusText.innerText = 'Play Music';
+        if (statusText) statusText.innerText = 'Play Shehnai';
         if (statusTextMobile) statusTextMobile.innerText = 'Music';
         const musicIcon = '<i data-lucide="music" class="w-4 h-4 text-gold-light"></i>';
         if (iconWrapper) iconWrapper.innerHTML = musicIcon;
@@ -1648,7 +1771,7 @@
     if (mobileMusicBtn) mobileMusicBtn.addEventListener('click', toggleMusic);
 
     /* =====================================================================
-       2. ENVELOPE OPENING EXPERIENCE (FEATURE A)
+       2. ENVELOPE OPENING EXPERIENCE
        ===================================================================== */
     const envelopeOverlay = document.getElementById('envelopeOverlay');
     const interactiveEnvelope = document.getElementById('interactiveEnvelope');
@@ -1659,14 +1782,14 @@
       if (!envelopeOverlay) return;
       interactiveEnvelope.classList.add('opened');
 
-      // Start music automatically on user interaction opening envelope
+      // Start royal instrumental shehnai music automatically on user interaction opening envelope
       startMusic();
 
       setTimeout(() => {
         envelopeOverlay.classList.add('hidden-envelope');
         // Trigger celebratory petal burst on reveal!
         triggerFlowerShower(window.innerWidth / 2, window.innerHeight * 0.4);
-        sessionStorage.setItem('envelope_opened', 'true');
+        sessionStorage.setItem('kajal_envelope_opened', 'true');
       }, 750);
     }
 
@@ -1685,7 +1808,7 @@
         if (envelopeOverlay) {
           startMusic();
           envelopeOverlay.classList.add('hidden-envelope');
-          sessionStorage.setItem('envelope_opened', 'true');
+          sessionStorage.setItem('kajal_envelope_opened', 'true');
         }
       });
     }
@@ -1701,17 +1824,17 @@
 
     // Check if previously opened in current browser session or if deep-linking via URL hash/query
     const urlParams = new URLSearchParams(window.location.search);
-    if (sessionStorage.getItem('envelope_opened') === 'true' || urlParams.get('opened') === '1' || window.location.hash) {
+    if (sessionStorage.getItem('kajal_envelope_opened') === 'true' || urlParams.get('opened') === '1' || window.location.hash) {
       if (envelopeOverlay) {
         envelopeOverlay.classList.add('hidden-envelope');
       }
     }
 
     /* =====================================================================
-       2. LIVE WEDDING COUNTDOWN TIMER
-       Target Date: November 29, 2026, 18:00:00 (Hast Melap ceremony)
+       3. LIVE WEDDING COUNTDOWN TIMER
+       Target Date: November 29, 2026, 19:00:00 (Hast Melap ceremony)
        ===================================================================== */
-    const weddingDate = new Date("2026-11-29T18:00:00+05:30").getTime();
+    const weddingDate = new Date("2026-11-29T19:00:00+05:30").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -1728,7 +1851,7 @@
         if (hoursEl) hoursEl.innerText = "00";
         if (minutesEl) minutesEl.innerText = "00";
         if (secondsEl) secondsEl.innerText = "00";
-        if (msgEl) msgEl.innerText = "The auspicious celebrations have commenced!";
+        if (msgEl) msgEl.innerText = "The auspicious Hasta Melap celebrations have commenced!";
         return;
       }
 
@@ -1756,7 +1879,7 @@
     updateCountdown();
 
     /* =====================================================================
-       3. GENTLE ROSE PETALS & TINY GOLD PARTICLES CANVAS
+       4. GENTLE ROSE & MARIGOLD PETALS & TINY GOLD PARTICLES CANVAS
        ===================================================================== */
     const canvas = document.getElementById('petalCanvas');
     const ctx = canvas.getContext('2d');
@@ -1768,17 +1891,17 @@
       height = canvas.height = window.innerHeight;
     });
 
-    // Elegant wedding palette petals (Dusty rose, soft champagne pink, burgundy, gold)
+    // Auspicious Gujarati Wedding Petals: Rose, Pink Cosmos, Marigold Gold, Kanku Vermilion
     const petalColors = [
-      'rgba(221, 168, 172, 0.75)',  // Dusty rose (#DDA8AC)
-      'rgba(244, 213, 216, 0.80)',  // Soft rose blush
-      'rgba(143, 29, 50, 0.60)',    // Burgundy wine petal (#8F1D32)
-      'rgba(248, 180, 195, 0.70)',  // Pastel rose
-      'rgba(197, 161, 93, 0.65)'    // Antique gold glint (#C5A15D)
+      'rgba(216, 158, 170, 0.75)',  // Soft blush pink
+      'rgba(245, 214, 220, 0.80)',  // Pastel rose
+      'rgba(143, 29, 50, 0.65)',    // Burgundy kanku
+      'rgba(197, 161, 93, 0.70)',   // Antique gold shimmer
+      'rgba(78, 125, 95, 0.40)'     // Auspicious sage leaf speck
     ];
 
     const showerColors = [
-      '#DDA8AC', '#F4D5D8', '#8F1D32', '#C5A15D', '#DFBF7F', '#F8B4C3'
+      '#D89EAA', '#F5D6DC', '#8F1D32', '#C5A15D', '#DFBF7F', '#F49EB1', '#345E45'
     ];
 
     class Petal {
@@ -1815,7 +1938,7 @@
         ctx.rotate((this.rotation * Math.PI) / 180);
         ctx.fillStyle = this.color;
 
-        // Elegant organic botanical rose petal (curved teardrop/almond contour)
+        // Elegant curved botanical teardrop rose petal
         ctx.beginPath();
         ctx.moveTo(0, -this.size * 0.9);
         ctx.bezierCurveTo(this.size * 0.75, -this.size * 0.45, this.size * 0.7, this.size * 0.7, 0, this.size);
@@ -1825,7 +1948,6 @@
       }
     }
 
-    // Occasional tiny antique-gold particles
     class GoldDust {
       constructor() {
         this.reset(true);
@@ -1858,43 +1980,40 @@
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(197, 161, 93, ${currentAlpha})`;
-        ctx.shadowBlur = 5;
-        ctx.shadowColor = 'rgba(197, 161, 93, 0.7)';
         ctx.fill();
         ctx.restore();
       }
     }
 
-    // Pushpa Vrushti Shower Burst Particle
-    class BurstParticle {
-      constructor(originX, originY) {
-        this.x = originX;
-        this.y = originY;
+    // Interactive Burst Particle on Click
+    class ShowerBurstParticle {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
         const angle = Math.random() * Math.PI * 2;
-        const speed = Math.random() * 8 + 4;
+        const speed = Math.random() * 8 + 3;
         this.vx = Math.cos(angle) * speed;
-        this.vy = Math.sin(angle) * speed - 4;
-        this.gravity = 0.2;
-        this.friction = 0.96;
-        this.size = Math.random() * 10 + 6;
+        this.vy = Math.sin(angle) * speed - 3;
+        this.gravity = 0.18;
+        this.friction = 0.985;
+        this.size = Math.random() * 9 + 6;
         this.rotation = Math.random() * 360;
-        this.rotSpeed = (Math.random() - 0.5) * 7;
+        this.rotSpeed = (Math.random() - 0.5) * 8;
         this.color = showerColors[Math.floor(Math.random() * showerColors.length)];
         this.alpha = 1;
-        this.decay = Math.random() * 0.009 + 0.007;
-        this.wobble = Math.random() * Math.PI;
+        this.life = 1;
+        this.decay = Math.random() * 0.012 + 0.008;
       }
 
       update() {
         this.vx *= this.friction;
-        this.vy += this.gravity;
         this.vy *= this.friction;
+        this.vy += this.gravity;
         this.x += this.vx;
         this.y += this.vy;
-        this.wobble += 0.05;
-        this.x += Math.sin(this.wobble) * 1.1;
         this.rotation += this.rotSpeed;
-        this.alpha -= this.decay;
+        this.life -= this.decay;
+        this.alpha = Math.max(0, this.life);
       }
 
       draw() {
@@ -1902,123 +2021,254 @@
         ctx.save();
         ctx.translate(this.x, this.y);
         ctx.rotate((this.rotation * Math.PI) / 180);
-        ctx.globalAlpha = Math.max(0, this.alpha);
+        ctx.globalAlpha = this.alpha;
         ctx.fillStyle = this.color;
 
-        // Elegant organic botanical rose petal burst shape
         ctx.beginPath();
-        ctx.moveTo(0, -this.size * 0.9);
-        ctx.bezierCurveTo(this.size * 0.75, -this.size * 0.45, this.size * 0.7, this.size * 0.7, 0, this.size);
-        ctx.bezierCurveTo(-this.size * 0.7, this.size * 0.7, -this.size * 0.75, -this.size * 0.45, 0, -this.size * 0.9);
+        ctx.moveTo(0, -this.size * 0.85);
+        ctx.bezierCurveTo(this.size * 0.7, -this.size * 0.4, this.size * 0.65, this.size * 0.65, 0, this.size);
+        ctx.bezierCurveTo(-this.size * 0.65, this.size * 0.65, -this.size * 0.7, -this.size * 0.4, 0, -this.size * 0.85);
         ctx.fill();
         ctx.restore();
       }
     }
 
-    const petals = [];
-    const petalCount = 22;
-    for (let i = 0; i < petalCount; i++) {
-      petals.push(new Petal());
-    }
-
-    const dustParticles = [];
-    const dustCount = 16;
-    for (let i = 0; i < dustCount; i++) {
-      dustParticles.push(new GoldDust());
-    }
-
+    const petals = Array.from({ length: 22 }, () => new Petal());
+    const sparkles = Array.from({ length: 20 }, () => new GoldDust());
     let burstParticles = [];
 
     function triggerFlowerShower(originX = width / 2, originY = height * 0.35) {
-      const count = 44;
-      for (let i = 0; i < count; i++) {
-        burstParticles.push(new BurstParticle(originX, originY));
+      for (let i = 0; i < 55; i++) {
+        burstParticles.push(new ShowerBurstParticle(originX, originY));
       }
     }
 
     function animatePetals() {
-      // Pause drawing if page is in background to preserve mobile battery
-      if (document.hidden) {
-        requestAnimationFrame(animatePetals);
-        return;
-      }
-
       ctx.clearRect(0, 0, width, height);
 
-      // 1. Draw Gold Dust
-      for (let i = 0; i < dustParticles.length; i++) {
-        dustParticles[i].update();
-        dustParticles[i].draw();
-      }
+      petals.forEach(p => {
+        p.update();
+        p.draw();
+      });
 
-      // 2. Draw Falling Rose Petals
-      for (let i = 0; i < petals.length; i++) {
-        petals[i].update();
-        petals[i].draw();
-      }
+      sparkles.forEach(s => {
+        s.update();
+        s.draw();
+      });
 
-      // 3. Draw Shower Burst
       for (let i = burstParticles.length - 1; i >= 0; i--) {
         const bp = burstParticles[i];
         bp.update();
         bp.draw();
-        if (bp.alpha <= 0 || bp.y > height + 40) {
+        if (bp.life <= 0) {
           burstParticles.splice(i, 1);
         }
       }
 
       requestAnimationFrame(animatePetals);
     }
+
     animatePetals();
 
-    // Pushpa Vrushti Click handler
     function handleShowerClick(e) {
-      const target = e.currentTarget;
-      const rect = target.getBoundingClientRect();
-      triggerFlowerShower(rect.left + rect.width / 2, rect.top);
-      setTimeout(() => {
-        triggerFlowerShower(window.innerWidth / 2, window.innerHeight * 0.3);
-      }, 200);
+      const rect = e.target.getBoundingClientRect();
+      const x = rect.left + rect.width / 2;
+      const y = rect.top;
+      triggerFlowerShower(x, y);
 
-      showBlessingToast('🌸 Heartfelt flower blessings showered upon Dr. Kashyap & Kajal!');
+      const blessings = [
+        "🌸 Auspicious Blessings for Kajal & Dr. Kashyap!",
+        "✨ Sada Saubhagyavati Bhava!",
+        "💐 May Lord Ganesha & Maa Ambaji bless the couple!",
+        "🙏 Sadashiv Parvati Sada Sahayate!",
+        "❤️ Forever in love, laughter, and companionship!"
+      ];
+      const randomMsg = blessings[Math.floor(Math.random() * blessings.length)];
+      showBlessingToast(randomMsg);
     }
 
-    if (flowerShowerBtn) flowerShowerBtn.addEventListener('click', handleShowerClick);
-    const flowerShowerBtnMobile = document.getElementById('flowerShowerBtnMobile');
-    if (flowerShowerBtnMobile) flowerShowerBtnMobile.addEventListener('click', handleShowerClick);
+    const showerBtn = document.getElementById('flowerShowerBtn');
+    if (showerBtn) showerBtn.addEventListener('click', handleShowerClick);
+    const showerBtnMobile = document.getElementById('flowerShowerBtnMobile');
+    if (showerBtnMobile) showerBtnMobile.addEventListener('click', handleShowerClick);
 
+    /* =====================================================================
+       5. BLESSING TOAST NOTIFICATIONS
+       ===================================================================== */
     function showBlessingToast(message) {
-      const existing = document.querySelector('.blessing-toast');
-      if (existing) existing.remove();
+      const container = document.getElementById('toastContainer');
+      if (!container) return;
 
       const toast = document.createElement('div');
-      toast.className = 'blessing-toast bg-warmWhite text-burgundy border border-champagne px-4 py-2.5 rounded-2xl shadow-2xl backdrop-blur-md text-xs font-bold tracking-wide flex items-center gap-2';
-      toast.innerHTML = `<span class="text-gold-antique">✨</span><span>${message}</span>`;
-      document.body.appendChild(toast);
+      toast.className = 'bg-warmWhite border border-champagne text-sage-deep px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2.5 text-xs font-semibold transform transition-all duration-300 translate-y-3 opacity-0 pointer-events-auto';
+      toast.innerHTML = `
+        <span class="text-base">🌸</span>
+        <span class="flex-1">${message}</span>
+      `;
+
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-3', 'opacity-0');
+      });
 
       setTimeout(() => {
-        if (toast && toast.parentNode) toast.remove();
-      }, 3800);
+        toast.classList.add('opacity-0', '-translate-y-2');
+        setTimeout(() => toast.remove(), 400);
+      }, 3500);
     }
 
     /* =====================================================================
-       7. SCROLL REVEAL OBSERVER
+       6. INTERACTIVE CEREMONY TABS FILTER
        ===================================================================== */
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          revealObserver.unobserve(entry.target);
-        }
+    const filterTabs = document.querySelectorAll('.filter-tab-btn');
+    const ceremonyCards = document.querySelectorAll('.ceremony-card');
+
+    filterTabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterTabs.forEach(b => {
+          b.classList.remove('active', 'bg-sage', 'text-white');
+          b.classList.add('text-charcoal-warm');
+        });
+        btn.classList.add('active', 'bg-sage', 'text-white');
+        btn.classList.remove('text-charcoal-warm');
+
+        const filter = btn.getAttribute('data-filter');
+
+        ceremonyCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-day') === filter) {
+            card.style.display = 'flex';
+            card.classList.add('active');
+          } else {
+            card.style.display = 'none';
+          }
+        });
       });
-    }, {
-      threshold: 0.08,
-      rootMargin: '0px 0px -30px 0px'
     });
 
-    document.querySelectorAll('.reveal').forEach((el) => {
-      revealObserver.observe(el);
+    /* =====================================================================
+       7. KANKOTRI LIGHTBOX MODAL VIEWER
+       ===================================================================== */
+    const kankotriPages = [
+      { src: 'assets/kajal/kankotri_cover.jpg', caption: 'Kankotri Card Cover - Lord Ganesha Medallion & Traditional Jaali Arch' },
+      { src: 'assets/kajal/kankotri_letter.jpg', caption: 'Main Lagna Patrika - Auspicious Invitation Letter, Tahuko & Family Lineage' },
+      { src: 'assets/kajal/kankotri_ceremonies.jpg', caption: 'Manglik Prasango - Sacred Muhurats, Timings & Siddhnath Mahadev Mandir Venue' }
+    ];
+    let currentSlide = 0;
+
+    const lightboxModal = document.getElementById('kankotriLightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+
+    function openKankotriLightbox(index = 0) {
+      currentSlide = index;
+      updateLightboxContent();
+      lightboxModal.classList.remove('hidden');
+      lightboxModal.classList.add('flex');
+    }
+
+    function closeKankotriLightbox() {
+      lightboxModal.classList.add('hidden');
+      lightboxModal.classList.remove('flex');
+    }
+
+    function updateLightboxContent() {
+      if (!lightboxImage || !lightboxCaption) return;
+      lightboxImage.src = kankotriPages[currentSlide].src;
+      lightboxCaption.innerText = kankotriPages[currentSlide].caption;
+    }
+
+    function nextKankotriSlide() {
+      currentSlide = (currentSlide + 1) % kankotriPages.length;
+      updateLightboxContent();
+    }
+
+    function prevKankotriSlide() {
+      currentSlide = (currentSlide - 1 + kankotriPages.length) % kankotriPages.length;
+      updateLightboxContent();
+    }
+
+    document.getElementById('viewKankotriBtn')?.addEventListener('click', () => openKankotriLightbox(0));
+    document.getElementById('viewKankotriBtnMobile')?.addEventListener('click', () => openKankotriLightbox(0));
+
+    // Keyboard support for Lightbox
+    window.addEventListener('keydown', (e) => {
+      if (!lightboxModal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeKankotriLightbox();
+        if (e.key === 'ArrowRight') nextKankotriSlide();
+        if (e.key === 'ArrowLeft') prevKankotriSlide();
+      }
     });
+
+    /* =====================================================================
+       8. SEND AASHIRWAD MODAL & BLESSINGS
+       ===================================================================== */
+    const customBlessingModal = document.getElementById('customBlessingModal');
+
+    function openCustomBlessingModal() {
+      if (customBlessingModal) {
+        customBlessingModal.classList.remove('hidden');
+        customBlessingModal.classList.add('flex');
+      }
+    }
+
+    function closeCustomBlessingModal() {
+      if (customBlessingModal) {
+        customBlessingModal.classList.add('hidden');
+        customBlessingModal.classList.remove('flex');
+      }
+    }
+
+    document.getElementById('sendBlessingBtn')?.addEventListener('click', openCustomBlessingModal);
+    document.getElementById('sendBlessingBtnMobile')?.addEventListener('click', openCustomBlessingModal);
+
+    function sendQuickAashirwad(text) {
+      triggerFlowerShower(window.innerWidth / 2, window.innerHeight * 0.5);
+      showBlessingToast(text);
+    }
+
+    function submitCustomBlessing() {
+      const name = document.getElementById('guestNameInput').value.trim() || 'Well Wisher';
+      const blessing = document.getElementById('guestBlessingInput').value.trim() || 'Aashirwad & Heartiest Congratulations to Kajal & Dr. Kashyap!';
+
+      closeCustomBlessingModal();
+      triggerFlowerShower(window.innerWidth / 2, window.innerHeight * 0.4);
+      showBlessingToast(`🙏 ${name}: "${blessing}"`);
+
+      // Clear input
+      document.getElementById('guestNameInput').value = '';
+      document.getElementById('guestBlessingInput').value = '';
+    }
+
+    /* =====================================================================
+       9. ADD TO CALENDAR (.ICS / GOOGLE CALENDAR)
+       ===================================================================== */
+    document.getElementById('addToCalendarBtn')?.addEventListener('click', () => {
+      const title = encodeURIComponent("Wedding of Kajal & Dr. Kashyap (Prajapati Family)");
+      const details = encodeURIComponent("Cordially invited to the royal wedding celebrations of Chi. Kajal & Chi. Dr. Kashyap at Shree Siddhnath Mahadev Mandir, Mandal Road, Viramgam.");
+      const location = encodeURIComponent("Shree Siddhnath Mahadev Mandir, Mandal Road, Viramgam, Gujarat");
+      const startTime = "20261129T153000Z";
+      const endTime = "20261129T220000Z";
+
+      const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startTime}/${endTime}&details=${details}&location=${location}`;
+      window.open(googleCalUrl, '_blank');
+      showBlessingToast("📅 Opening Google Calendar to save wedding date!");
+    });
+
+    /* =====================================================================
+       10. SCROLL REVEAL OBSERVER
+       ===================================================================== */
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
   </script>
 </body>
 
