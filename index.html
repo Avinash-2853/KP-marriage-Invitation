@@ -1420,8 +1420,6 @@
     } catch (e) {
       console.warn('Audio initialization error:', e);
     }
-    weddingAudio.loop = true;
-    weddingAudio.preload = 'auto';
 
     let isPlaying = false;
 
@@ -1482,15 +1480,17 @@
       }
     }
 
-    weddingAudio.addEventListener('pause', () => {
-      isPlaying = false;
-      updateMusicUI(false);
-    });
+    if (weddingAudio) {
+      weddingAudio.addEventListener('pause', () => {
+        isPlaying = false;
+        updateMusicUI(false);
+      });
 
-    weddingAudio.addEventListener('ended', () => {
-      isPlaying = false;
-      updateMusicUI(false);
-    });
+      weddingAudio.addEventListener('ended', () => {
+        isPlaying = false;
+        updateMusicUI(false);
+      });
+    }
 
     const desktopMusicBtn = document.getElementById('musicToggle');
     if (desktopMusicBtn) desktopMusicBtn.addEventListener('click', toggleMusic);
@@ -1582,11 +1582,17 @@
     }
 
     // Check if previously opened in current browser session or if deep-linking via URL hash/query
-    const urlParams = new URLSearchParams(window.location.search);
-    if (sessionStorage.getItem('kajal_envelope_opened') === 'true' || urlParams.get('opened') === '1' || window.location.hash) {
-      if (envelopeOverlay) {
-        envelopeOverlay.classList.add('hidden-envelope');
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (sessionStorage.getItem('kajal_envelope_opened') === 'true' || urlParams.get('opened') === '1' || window.location.hash) {
+        const envelopeOverlay = document.getElementById('envelopeOverlay');
+        if (envelopeOverlay) {
+          envelopeOverlay.classList.add('hidden-envelope');
+          envelopeOverlay.style.display = 'none';
+        }
       }
+    } catch (err) {
+      console.warn('SessionStorage check error:', err);
     }
 
     /* =====================================================================
@@ -1900,45 +1906,7 @@
         });
       });
     });
-      } catch (e) {
-        console.warn('Could not save to localStorage', e);
-      }
-    }
 
-    function renderBlessings() {
-      try {
-        const wrapper = document.getElementById('recentBlessingsWrapper');
-        const list = document.getElementById('recentBlessingsList');
-        if (!wrapper || !list) return;
-
-        const stored = JSON.parse(localStorage.getItem('kajal_blessings') || '[]');
-        if (stored.length === 0) {
-          wrapper.classList.add('hidden');
-          return;
-        }
-
-        wrapper.classList.remove('hidden');
-        list.innerHTML = stored.map(b => `
-          <div class="bg-ivory p-3 rounded-xl border border-champagne text-xs text-charcoal">
-            <div class="flex items-center justify-between font-bold text-peacock mb-0.5">
-              <span>${escapeHtml(b.name)}</span>
-              <span class="text-[10px] text-charcoal-muted font-normal">${b.time}</span>
-            </div>
-            <div class="italic text-charcoal">${escapeHtml(b.text)}</div>
-          </div>
-        `).join('');
-      } catch (e) {
-        console.warn('Could not render blessings', e);
-      }
-    }
-
-    function escapeHtml(str) {
-      const div = document.createElement('div');
-      div.innerText = str;
-      return div.innerHTML;
-    }
-
-    renderBlessings();
 
     /* =====================================================================
        8. ADD TO CALENDAR (.ICS & GOOGLE CALENDAR)
