@@ -191,6 +191,9 @@
       border: 2px solid #C6A15B;
       perspective: 1200px;
       cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
@@ -207,6 +210,7 @@
     }
 
     .envelope-flap {
+      pointer-events: none;
       position: absolute;
       top: 0;
       left: 0;
@@ -227,6 +231,9 @@
     }
 
     .envelope-letter {
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
       position: absolute;
       inset: 8px 12px;
       background: #FFFCF7;
@@ -247,6 +254,9 @@
     }
 
     .wax-seal {
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -397,7 +407,7 @@
   <aside id="envelopeOverlay" aria-label="Interactive Royal Wedding Invitation Envelope">
 
     <!-- Direct Skip Button -->
-    <button id="skipEnvelopeBtn"
+    <button id="skipEnvelopeBtn" onclick="openEnvelope(event)"
       class="absolute top-6 right-6 z-20 flex items-center gap-1.5 px-4 py-2 bg-cream/90 hover:bg-cream text-peacock border border-champagne rounded-full shadow-md text-xs font-semibold tracking-wider transition-all hover:scale-105 cursor-pointer">
       <span>Skip to Invitation</span>
       <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
@@ -418,7 +428,7 @@
       </p>
 
       <!-- The 3D Royal Kankotri Envelope Box -->
-      <div id="interactiveEnvelope" class="envelope-box mb-6" role="button" tabindex="0"
+      <div id="interactiveEnvelope" class="envelope-box mb-6" role="button" tabindex="0" onclick="openEnvelope(event)"
         aria-label="Click to open Kajal and Dr. Kashyap's wedding invitation envelope">
 
         <!-- Top Flap with ornamental gold arch tip -->
@@ -431,7 +441,7 @@
         </div>
 
         <!-- Sliding Wedding Letter Preview Inside -->
-        <div class="envelope-letter">
+        <div class="envelope-letter select-none pointer-events-none">
           <div class="text-gold-dark text-[10px] sm:text-xs uppercase tracking-[0.25em] font-cinzel font-bold mb-1">
             Prajapati Family &bull; Bandhavad - Viramgam
           </div>
@@ -451,23 +461,23 @@
         </div>
 
         <!-- Royal Golden Medallion Wax Seal Button -->
-        <div class="wax-seal">
-          <svg class="w-4 h-4 text-peacock fill-current mb-0.5" viewBox="0 0 24 24">
+        <div class="wax-seal" onclick="openEnvelope(event)">
+          <svg class="w-4 h-4 text-peacock fill-current mb-0.5 pointer-events-none" viewBox="0 0 24 24">
             <path
               d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
           </svg>
-          <span class="font-cinzel text-xs font-bold tracking-widest text-peacock">K &hearts; K</span>
-          <span class="text-[8px] uppercase tracking-wider text-peacock font-extrabold mt-0.5">Open</span>
+          <span class="font-cinzel text-xs font-bold tracking-widest text-peacock pointer-events-none">K &hearts; K</span>
+          <span class="text-[8px] uppercase tracking-wider text-peacock font-extrabold mt-0.5 pointer-events-none">Open</span>
         </div>
 
       </div>
 
-      <!-- Action helper text with glowing sparkles -->
-      <p class="text-xs text-peacock font-semibold tracking-wide flex items-center gap-2 animate-pulse">
+      <!-- Action helper button with glowing sparkles -->
+      <button onclick="openEnvelope(event)" class="text-xs text-peacock font-semibold tracking-wide flex items-center gap-2 animate-pulse hover:scale-105 transition cursor-pointer">
         <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-antique"></i>
-        <span>Tap the royal gold seal to open the invitation</span>
+        <span>Tap anywhere to open the royal invitation</span>
         <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold-antique"></i>
-      </p>
+      </button>
 
     </div>
   </aside>
@@ -504,7 +514,7 @@
     </button>
 
     <!-- 4. Reopen Envelope -->
-    <button id="reopenEnvelopeBtn" title="Re-open the interactive envelope"
+    <button id="reopenEnvelopeBtn" onclick="reopenEnvelope(event)" title="Re-open the interactive envelope"
       class="bg-cream/90 hover:bg-cream text-charcoal-muted hover:text-peacock border border-champagne w-9 h-9 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 cursor-pointer">
       <i data-lucide="mail-open" class="w-4 h-4"></i>
     </button>
@@ -1389,14 +1399,27 @@
        JAVASCRIPT ARCHITECTURE & INTERACTIVE CONTROLS
        ===================================================================== -->
   <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
+    // Initialize Lucide Icons defensively
+    try {
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    } catch (e) {
+      console.warn('Lucide icon init error:', e);
+    }
 
     /* =====================================================================
        1. ROYAL GUJARATI WEDDING AUDIO (AUDIO ELEMENT)
-       Plays 'Divine%20Lullaby.mp3' seamlessly with looping and state toggle.
+       Plays 'divine_lullaby.mp3' seamlessly with looping and state toggle.
        ===================================================================== */
-    const weddingAudio = new Audio('Divine%20Lullaby.mp3');
+    let weddingAudio;
+    try {
+      weddingAudio = new Audio('divine_lullaby.mp3');
+      weddingAudio.loop = true;
+      weddingAudio.preload = 'auto';
+    } catch (e) {
+      console.warn('Audio initialization error:', e);
+    }
     weddingAudio.loop = true;
     weddingAudio.preload = 'auto';
 
@@ -1432,13 +1455,20 @@
     }
 
     function startMusic() {
-      if (!isPlaying) {
-        weddingAudio.play().then(() => {
-          isPlaying = true;
-          updateMusicUI(true);
-        }).catch((err) => {
-          console.warn('Audio play request blocked or failed:', err);
-        });
+      try {
+        if (!isPlaying && weddingAudio) {
+          const promise = weddingAudio.play();
+          if (promise !== undefined) {
+            promise.then(() => {
+              isPlaying = true;
+              updateMusicUI(true);
+            }).catch((err) => {
+              console.warn('Audio play request blocked or failed:', err);
+            });
+          }
+        }
+      } catch (err) {
+        console.warn('startMusic error:', err);
       }
     }
 
@@ -1470,52 +1500,85 @@
     /* =====================================================================
        2. ENVELOPE OPENING EXPERIENCE
        ===================================================================== */
-    const envelopeOverlay = document.getElementById('envelopeOverlay');
-    const interactiveEnvelope = document.getElementById('interactiveEnvelope');
-    const skipEnvelopeBtn = document.getElementById('skipEnvelopeBtn');
-    const reopenEnvelopeBtn = document.getElementById('reopenEnvelopeBtn');
+    let isEnvelopeOpening = false;
 
-    function openEnvelope() {
-      if (!envelopeOverlay) return;
-      interactiveEnvelope.classList.add('opened');
+    function openEnvelope(e) {
+      if (e) {
+        try { e.stopPropagation(); } catch (err) {}
+      }
+      if (isEnvelopeOpening) return;
+      isEnvelopeOpening = true;
 
-      // Start royal instrumental shehnai music automatically on user interaction opening envelope
-      startMusic();
+      const overlay = document.getElementById('envelopeOverlay');
+      const envelope = document.getElementById('interactiveEnvelope');
 
+      if (envelope) {
+        envelope.classList.add('opened');
+      }
+
+      // Safe audio play attempt
+      try {
+        startMusic();
+      } catch (err) {
+        console.warn('Audio start error:', err);
+      }
+
+      // Smooth transition to unveil wedding invitation
       setTimeout(() => {
-        envelopeOverlay.classList.add('hidden-envelope');
-        triggerFlowerShower(window.innerWidth / 2, window.innerHeight * 0.4);
-        sessionStorage.setItem('kajal_envelope_opened', 'true');
-      }, 750);
+        if (overlay) {
+          overlay.classList.add('hidden-envelope');
+          setTimeout(() => {
+            overlay.style.display = 'none';
+          }, 850);
+        }
+
+        try {
+          triggerFlowerShower(window.innerWidth / 2, window.innerHeight * 0.4);
+        } catch (err) {}
+
+        try {
+          sessionStorage.setItem('kajal_envelope_opened', 'true');
+        } catch (err) {}
+      }, 650);
     }
 
+    function reopenEnvelope(e) {
+      if (e) {
+        try { e.stopPropagation(); } catch (err) {}
+      }
+      isEnvelopeOpening = false;
+      const overlay = document.getElementById('envelopeOverlay');
+      const envelope = document.getElementById('interactiveEnvelope');
+      if (overlay && envelope) {
+        overlay.style.display = 'flex';
+        envelope.classList.remove('opened');
+        requestAnimationFrame(() => {
+          overlay.classList.remove('hidden-envelope');
+        });
+      }
+    }
+
+    // Attach listeners across all devices
+    const interactiveEnvelope = document.getElementById('interactiveEnvelope');
     if (interactiveEnvelope) {
       interactiveEnvelope.addEventListener('click', openEnvelope);
+      interactiveEnvelope.addEventListener('touchend', openEnvelope);
       interactiveEnvelope.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          openEnvelope();
+          openEnvelope(e);
         }
       });
     }
 
+    const skipEnvelopeBtn = document.getElementById('skipEnvelopeBtn');
     if (skipEnvelopeBtn) {
-      skipEnvelopeBtn.addEventListener('click', () => {
-        if (envelopeOverlay) {
-          startMusic();
-          envelopeOverlay.classList.add('hidden-envelope');
-          sessionStorage.setItem('kajal_envelope_opened', 'true');
-        }
-      });
+      skipEnvelopeBtn.addEventListener('click', openEnvelope);
     }
 
+    const reopenEnvelopeBtn = document.getElementById('reopenEnvelopeBtn');
     if (reopenEnvelopeBtn) {
-      reopenEnvelopeBtn.addEventListener('click', () => {
-        if (envelopeOverlay && interactiveEnvelope) {
-          interactiveEnvelope.classList.remove('opened');
-          envelopeOverlay.classList.remove('hidden-envelope');
-        }
-      });
+      reopenEnvelopeBtn.addEventListener('click', reopenEnvelope);
     }
 
     // Check if previously opened in current browser session or if deep-linking via URL hash/query
