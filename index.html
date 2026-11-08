@@ -480,7 +480,7 @@
   <!-- =====================================================================
        FLOATING INTERACTIVE CONTROLS (DESKTOP DOCK & MOBILE DOCK)
        - Shower Flowers (Pushpa Vrushti)
-       - Play/Pause Royal Shehnai Wedding Music (Royal Gujarati Wedding.mp3)
+       - Play/Pause Royal Shehnai Wedding Music (Divine Lullaby.mp3)
        - Send Blessings (Aashirwad)
        ===================================================================== -->
   <aside aria-label="Interactive Controls" class="fixed z-40 transition-all duration-300
@@ -495,12 +495,12 @@
     </button>
 
     <!-- 2. Traditional Shehnai Wedding Music Toggle -->
-    <button id="musicToggle" title="Royal Gujarati Wedding Music"
+    <button id="musicToggle" title="Divine Wedding Music"
       class="group flex items-center gap-2.5 peacock-gradient hover:brightness-110 text-white border border-gold/40 px-4 py-2.5 rounded-full shadow-xl backdrop-blur-md transition-all duration-300 transform hover:scale-105 active:scale-95 text-xs font-medium tracking-wide cursor-pointer">
       <span id="musicIconWrapper" class="flex items-center justify-center">
         <i data-lucide="music" class="w-4 h-4 text-gold-light"></i>
       </span>
-      <span id="musicStatusText">Play Shehnai</span>
+      <span id="musicStatusText">Play Music</span>
     </button>
 
     <!-- 4. Reopen Envelope -->
@@ -1394,9 +1394,9 @@
 
     /* =====================================================================
        1. ROYAL GUJARATI WEDDING AUDIO (AUDIO ELEMENT)
-       Plays 'Royal Gujarati Wedding.mp3' seamlessly with looping and state toggle.
+       Plays 'Divine%20Lullaby.mp3' seamlessly with looping and state toggle.
        ===================================================================== */
-    const weddingAudio = new Audio('Royal Gujarati Wedding.mp3');
+    const weddingAudio = new Audio('Divine%20Lullaby.mp3');
     weddingAudio.loop = true;
     weddingAudio.preload = 'auto';
 
@@ -1417,12 +1417,12 @@
       const iconWrapperMobile = document.getElementById('musicIconWrapperMobile');
 
       if (playing) {
-        if (statusText) statusText.innerText = 'Pause Shehnai';
+        if (statusText) statusText.innerText = 'Pause Music';
         if (statusTextMobile) statusTextMobile.innerText = 'Pause';
         if (iconWrapper) iconWrapper.innerHTML = eqBars;
         if (iconWrapperMobile) iconWrapperMobile.innerHTML = eqBars;
       } else {
-        if (statusText) statusText.innerText = 'Play Shehnai';
+        if (statusText) statusText.innerText = 'Play Music';
         if (statusTextMobile) statusTextMobile.innerText = 'Music';
         const musicIcon = '<i data-lucide="music" class="w-4 h-4 text-gold-light"></i>';
         if (iconWrapper) iconWrapper.innerHTML = musicIcon;
